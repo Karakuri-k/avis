@@ -33,7 +33,11 @@ img {
     max-width: 100%;
     height: auto;
 }
-
+/*css minimal reset ^*/
+:root {
+    --purpleLight: rgb(234, 201, 237);
+    --tealLight: rgb(179, 231, 229)
+}
 nav {
     display: flex;
     justify-content: space-around;
@@ -44,7 +48,7 @@ nav {
 }
 
 nav {
-    background-color: aliceblue;
+    background-color: var(--teal);
 }
 
 nav a,
