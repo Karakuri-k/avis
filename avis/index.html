@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Square News</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>avis</title>
 </head>
 <body>
-    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="klikk()">Dropdown
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <article></article>
+    </main>
+    <footer></footer>
+
+    <script>
+
+        function klikk() {
+            const dropdownElm = document.querySelector(".dropdown-content")
+            if (dropdownElm.style.display == "flex") {
+                dropdownElm.style.display = "none"
+            } else {
+                dropdownElm.style.display = "flex"
+            }
+        }
+    </script>
+
 </body>
 </html>
