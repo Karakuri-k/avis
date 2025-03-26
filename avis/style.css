@@ -43,6 +43,7 @@ body {
     height: 100vh;
     background-color: var(--lightMode);
 }
+
 /*css minimal reset ^*/
 :root {
     --purple: rgb(250, 189, 255);
@@ -52,7 +53,7 @@ body {
     --lightAccent: #d9e9f0;
 }
 
-p{
+p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -70,7 +71,6 @@ nav {
     background-color: var(--lightAccent);
 }
 
-
 nav a,
 nav button {
     background-color: inherit;
@@ -81,20 +81,17 @@ nav button {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.dropdown-content {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    background-color: antiquewhite;
-    padding: 20px;
-    margin-left: 20px;
-    margin-top: -10px;
+.dropbtn {
+    height: auto;
+    width: 42px;
 }
+
 
 .dropdown-content a {
     font-size: 18px;
     padding: 5px;
 }
+
 .settingsWindow {
     height: 100vh;
     background-color: var(--lightAccent);
@@ -105,15 +102,24 @@ nav button {
     top: 74px;
 }
 
-
+.dropdown-content {
+    height: 100vh;
+    background-color: var(--lightAccent);
+    width: 300px;
+    z-index: 1000;
+    position: fixed;
+    left: 0px;
+    top: 74px;
+}
 
 
 /* Til artikler*/
-.headerImg{
- width: 60%;
+.headerImg {
+    width: 60%;
 
 }
-main.article{
+
+main.article {
     width: 60%;
     height: fit-content;
     overflow: scroll;
@@ -122,7 +128,7 @@ main.article{
     padding: 20px 60px 60px 60px;
 }
 
-header.article{
+header.article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,14 +136,15 @@ header.article{
     padding-top: 10px;
 }
 
-section.article{
+section.article {
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
- section.article>p{
+
+section.article>p {
     font-size: 1.5rem;
- }
+}
 
 .inspirasjon {
     font-size: 1rem;
@@ -149,14 +156,14 @@ section.article{
     display: flex;
     justify-content: space-between;
     font-size: 1.25rem;
-    
+
 }
 
 
 
 
 /* SignalApp css*/
-.signalApp main{
+.signalApp main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -165,10 +172,10 @@ section.article{
     gap: 30px;
 }
 
-.signalApp main section{
+.signalApp main section {
     width: 100%;
 }
 
-.signalApp main > section img{
-    width:80%;
+.signalApp main>section img {
+    width: 80%;
 }
