@@ -91,8 +91,6 @@ nav button {
 }
 main.article{
     width: 60%;
-   
-
     height: fit-content;
     overflow: scroll;
     margin: auto;
