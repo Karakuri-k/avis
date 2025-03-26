@@ -9,6 +9,7 @@ html {
     box-sizing: inherit;
 }
 
+
 body,
 h1,
 h2,
@@ -46,6 +47,10 @@ body {
     --purple: rgb(250, 189, 255);
     --teal: rgb(149, 235, 231);
     --darkMode: rgb(37, 36, 59);
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
