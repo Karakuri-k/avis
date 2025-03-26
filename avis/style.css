@@ -95,8 +95,8 @@ nav button {
     background-color: var(--lightAccent);
     width: 300px;
     z-index: 1000;
-    position: absolute;
-    right: 0;
+    position: fixed;
+    right: -300px;
     top: 74px;
 }
 
