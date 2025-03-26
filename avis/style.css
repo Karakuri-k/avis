@@ -129,3 +129,10 @@ header.article{
     right: 0;
     margin-top: 0;
 }
+.darkmodeContainer {
+    margin: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    
+}
