@@ -128,6 +128,9 @@ header.article {
     padding-bottom: 60px;
     padding-top: 10px;
 }
+header.article>p{
+    padding:0 10px;
+}
 
 section.article {
     display: flex;
@@ -143,7 +146,7 @@ section.article {
 
 .inspirasjon {
     font-size: 1rem;
-    color: gray;
+    color: var(--darkMode);
 }
 
 
