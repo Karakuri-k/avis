@@ -42,8 +42,8 @@ body {
 }
 /*css minimal reset ^*/
 :root {
-    --purpleLight: rgb(234, 201, 237);
-    --tealLight: rgb(179, 231, 229)
+    --purple: rgb(250, 189, 255);
+    --teal: rgb(149, 235, 231)
 }
 nav {
     display: flex;
@@ -55,7 +55,7 @@ nav {
 }
 
 nav {
-    background-color: var(--tealLight);
+    background-color: var(--teal);
 }
 
 nav a,
