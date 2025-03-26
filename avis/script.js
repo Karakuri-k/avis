@@ -9,7 +9,14 @@ function klikk() {
 
 const darkModeKnapp = document.querySelector(".darkmodeContainer > i")
 
+let dark = false
 darkModeKnapp.addEventListener("click", function() {
     console.log("trykket")
-    document.body.style.backgroundColor = "var(--darkMode)"
+    if (!dark) {
+        document.body.style.backgroundColor = "var(--darkMode)"
+        dark = true
+    } else {
+        document.body.style.backgroundColor = "var(--lightMode)"
+        dark = false
+    }
 })

@@ -40,12 +40,15 @@ body {
     margin-top: 74px;
     font-size: 16px;
     height: 100vh;
+    background-color: var(--lightMode);
 }
 /*css minimal reset ^*/
 :root {
     --purple: rgb(250, 189, 255);
     --teal: rgb(149, 235, 231);
     --darkMode: rgb(37, 36, 59);
+    --lightMode: #e7f0f4;
+    --lightAccent: #d9e9f0;
 }
 
 
@@ -59,7 +62,7 @@ nav {
     top: 0;
     z-index: 1;
     height: 74px;
-    background-color: var(--teal);
+    background-color: var(--lightAccent);
 }
 
 
@@ -89,14 +92,13 @@ nav button {
 }
 .settingsWindow {
     height: 100vh;
-    background-color: red;
+    background-color: var(--lightAccent);
     width: 300px;
     z-index: 1000;
     position: absolute;
     right: 0;
     top: 74px;
 }
-
 
 
 
@@ -121,15 +123,7 @@ header.article{
     padding: 0px 60px 60px 60px;
 }
 
-.settingsWindow {
-    height: 100vh;
-    background-color: red;
-    width: 300px;
-    z-index: 1000;
-    position: fixed;
-    right: 0;
-    margin-top: 0;
-}
+
 
 /* SignalApp*/
 .signalApp main{
