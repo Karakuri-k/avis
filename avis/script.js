@@ -11,5 +11,5 @@ const darkModeKnapp = document.querySelector(".darkmodeContainer > i")
 
 darkModeKnapp.addEventListener("click", function() {
     console.log("trykket")
-    document.body.style.backgroundColor = "red"
+    document.body.style.backgroundColor = "var(--darkMode)"
 })

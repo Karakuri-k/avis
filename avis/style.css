@@ -44,7 +44,8 @@ body {
 /*css minimal reset ^*/
 :root {
     --purple: rgb(250, 189, 255);
-    --teal: rgb(149, 235, 231)
+    --teal: rgb(149, 235, 231);
+    --darkMode: rgb(37, 36, 59);
 }
 
 
