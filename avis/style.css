@@ -113,30 +113,67 @@ main.article{
     height: fit-content;
     overflow: scroll;
     margin: auto;
-    box-shadow: 10px 5px 5px black;
+    box-shadow: 0px 10px 20px -10px black;
+    padding: 20px 60px 60px 60px;
 }
 
 header.article{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px 60px 60px 60px;
+    padding-bottom: 60px;
+    padding-top: 10px;
 }
 
-
-
-/* SignalApp*/
-.signalApp main{
+section.article{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 80%;
-    padding: 20px;
+    gap: 50px;
 }
+ section.article>p{
+    font-size: 1.5rem;
+ }
+
+.inspirasjon {
+    font-size: 1rem;
+}
+
+
+.settingsWindow {
+    height: 100vh;
+    background-color: red;
+    width: 300px;
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    margin-top: 0;
+}
+
 .darkmodeContainer {
     margin: 1.25rem;
     display: flex;
     justify-content: space-between;
     font-size: 1.25rem;
     
+}
+
+
+
+
+/* SignalApp css*/
+.signalApp main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    padding: 20px;
+    gap: 30px;
+}
+
+.signalApp main section{
+    width: 100%;
+}
+
+.signalApp main > section img{
+    width:80%;
 }
