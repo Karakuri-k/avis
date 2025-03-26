@@ -41,12 +41,15 @@ body {
     margin-top: 74px;
     font-size: 16px;
     height: 100vh;
+    background-color: var(--lightMode);
 }
 /*css minimal reset ^*/
 :root {
     --purple: rgb(250, 189, 255);
     --teal: rgb(149, 235, 231);
     --darkMode: rgb(37, 36, 59);
+    --lightMode: #e7f0f4;
+    --lightAccent: #d9e9f0;
 }
 
 p{
@@ -64,7 +67,7 @@ nav {
     top: 0;
     z-index: 1;
     height: 74px;
-    background-color: var(--teal);
+    background-color: var(--lightAccent);
 }
 
 
@@ -94,14 +97,13 @@ nav button {
 }
 .settingsWindow {
     height: 100vh;
-    background-color: red;
+    background-color: var(--lightAccent);
     width: 300px;
     z-index: 1000;
     position: absolute;
     right: 0;
     top: 74px;
 }
-
 
 
 
@@ -152,18 +154,31 @@ section.article{
     margin-top: 0;
 }
 
-/* SignalApp*/
-.signalApp main{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 80%;
-    padding: 20px;
-}
 .darkmodeContainer {
     margin: 1.25rem;
     display: flex;
     justify-content: space-between;
     font-size: 1.25rem;
     
+}
+
+
+
+
+/* SignalApp css*/
+.signalApp main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    padding: 20px;
+    gap: 30px;
+}
+
+.signalApp main section{
+    width: 100%;
+}
+
+.signalApp main > section img{
+    width:80%;
 }
