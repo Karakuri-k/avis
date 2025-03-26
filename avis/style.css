@@ -45,6 +45,9 @@ body {
     --purple: rgb(250, 189, 255);
     --teal: rgb(149, 235, 231)
 }
+
+
+/* Til Navbar */
 nav {
     display: flex;
     justify-content: space-around;
@@ -84,7 +87,21 @@ nav button {
     font-size: 18px;
     padding: 5px;
 }
+.settingsWindow {
+    height: 100vh;
+    background-color: red;
+    width: 300px;
+    z-index: 1000;
+    position: absolute;
+    right: 0;
+    top: 75px;
+}
 
+
+
+
+
+/* Til artikler*/
 .headerImg{
  width: 60%;
 
@@ -94,11 +111,14 @@ main.article{
     height: fit-content;
     overflow: scroll;
     margin: auto;
+    box-shadow: 10px 5px 5px black;
 }
+
 header.article{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0px 60px 60px 60px;
 }
 
 .settingsWindow {
