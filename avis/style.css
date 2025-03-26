@@ -136,7 +136,10 @@ section.article {
 }
  section.article>p{
     font-size: 1.25rem;
- }
+}
+.sectionImg{
+    box-shadow:  10px 10px 20px -5px  var(--lightAccent);
+}
 
 .inspirasjon {
     font-size: 1rem;
