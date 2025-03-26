@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -128,6 +131,9 @@ header.article {
     padding-bottom: 60px;
     padding-top: 10px;
 }
+header.article>p{
+    padding:0 10px;
+}
 
 section.article {
     display: flex;
@@ -143,7 +149,7 @@ section.article {
 
 .inspirasjon {
     font-size: 1rem;
-    color: gray;
+    color: var(--darkMode);
 }
 
 
