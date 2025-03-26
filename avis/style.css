@@ -144,16 +144,6 @@ section.article{
 }
 
 
-.settingsWindow {
-    height: 100vh;
-    background-color: red;
-    width: 300px;
-    z-index: 1000;
-    position: fixed;
-    right: 0;
-    margin-top: 0;
-}
-
 .darkmodeContainer {
     margin: 1.25rem;
     display: flex;
