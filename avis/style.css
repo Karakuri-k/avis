@@ -39,6 +39,7 @@ body {
        margin på toppen for å ikke bli liggende "bak" den */
     margin-top: 100px;
     font-size: 16px;
+}
 /*css minimal reset ^*/
 :root {
     --purpleLight: rgb(234, 201, 237);
