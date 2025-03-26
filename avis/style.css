@@ -44,7 +44,8 @@ body {
 /*css minimal reset ^*/
 :root {
     --purple: rgb(250, 189, 255);
-    --teal: rgb(149, 235, 231)
+    --teal: rgb(149, 235, 231);
+    --darkMode: rgb(37, 36, 59);
 }
 
 
@@ -130,3 +131,31 @@ header.article{
     margin-top: 0;
 }
 
+.darkmodeContainer {
+    margin: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    
+}
+
+
+
+
+/* SignalApp css*/
+.signalApp main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    padding: 20px;
+    gap: 30px;
+}
+
+.signalApp main section{
+    width: 100%;
+}
+
+.signalApp main > section img{
+    width:80%;
+}
