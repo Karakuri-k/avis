@@ -87,11 +87,6 @@ nav button {
 }
 
 
-.dropdown-content a {
-    font-size: 18px;
-    padding: 5px;
-}
-
 .settingsWindow {
     height: 100vh;
     background-color: var(--lightAccent);
@@ -103,6 +98,8 @@ nav button {
 }
 
 .dropdown-content {
+    display: none;
+    flex-direction: column;
     height: 100vh;
     background-color: var(--lightAccent);
     width: 300px;
@@ -147,7 +144,7 @@ section.article {
 }
 
 
-.darkmodeContainer {
+.darkmodeContainer , .dropdown-content a {
     margin: 1.25rem;
     display: flex;
     justify-content: space-between;
