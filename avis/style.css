@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -129,6 +132,9 @@ header.article {
     padding-bottom: 60px;
     padding-top: 10px;
 }
+header.article>p{
+    padding:0 10px;
+}
 
 section.article {
     display: flex;
@@ -137,11 +143,14 @@ section.article {
 }
  section.article>p{
     font-size: 1.25rem;
- }
+}
+.sectionImg{
+    box-shadow:  10px 10px 20px -5px  var(--lightAccent);
+}
 
 .inspirasjon {
     font-size: 1rem;
-    color: gray;
+    color: var(--darkMode);
 }
 
 
@@ -166,13 +175,28 @@ section.article {
     gap: 30px;
 }
 
-.signalApp main section {
-    width: 100%;
+.signalApp p{
+    font-size:1.25rem;
 }
 
+.signalApp h3{
+    font-size: 2rem;
+}
+.signalApp section h1{
+    font-size: 48px; /*bytt når vi får root for h1*/
+} 
 .signalApp main > section img{
-    width:80%;
+    width:90%;
 }
 .signalApp ul{
     list-style: circle;
+    padding: 28px;
+}
+
+.brodtekst{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
 }
