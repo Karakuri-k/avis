@@ -130,11 +130,3 @@ header.article{
     margin-top: 0;
 }
 
-/* SignalApp*/
-.signalApp main{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 80%;
-    padding: 20px;
-}
