@@ -38,6 +38,7 @@ body {
     /* Vår navbar har position fixed. Da må vi ha litt 
        margin på toppen for å ikke bli liggende "bak" den */
     margin-top: 100px;
+
     font-size: 16px;
 }
 /*css minimal reset ^*/
@@ -45,6 +46,9 @@ body {
     --purple: rgb(250, 189, 255);
     --teal: rgb(149, 235, 231)
 }
+
+
+/* Til Navbar */
 nav {
     display: flex;
     justify-content: space-around;
@@ -84,6 +88,10 @@ nav button {
     padding: 5px;
 }
 
+
+
+
+/* Til artikler*/
 .headerImg{
  width: 60%;
 
@@ -95,9 +103,12 @@ main.article{
     height: fit-content;
     overflow: scroll;
     margin: auto;
+    box-shadow: 10px 5px 5px black;
 }
+
 header.article{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0px 60px 60px 60px;
 }
