@@ -33,6 +33,13 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+body {
+    /* Vår navbar har position fixed. Da må vi ha litt 
+       margin på toppen for å ikke bli liggende "bak" den */
+    margin-top: 100px;
+    font-size: 16px;
+}
 /*css minimal reset ^*/
 :root {
     --purple: rgb(250, 189, 255);
@@ -75,4 +82,22 @@ nav button {
 .dropdown-content a {
     font-size: 18px;
     padding: 5px;
+}
+
+.headerImg{
+ width: 60%;
+
+}
+main.article{
+    width: 60%;
+   
+
+    height: fit-content;
+    overflow: scroll;
+    margin: auto;
+}
+header.article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
