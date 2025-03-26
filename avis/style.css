@@ -114,18 +114,14 @@ nav button {
 
 
 /* Til artikler*/
-.headerImg {
-    width: 60%;
-
-}
-
-main.article {
+main.article{
     width: 60%;
     height: fit-content;
-    overflow: scroll;
+
     margin: auto;
     box-shadow: 0px 10px 20px -10px black;
     padding: 20px 60px 60px 60px;
+    background-color: white;
 }
 
 header.article {
@@ -141,13 +137,13 @@ section.article {
     flex-direction: column;
     gap: 50px;
 }
-
-section.article>p {
-    font-size: 1.5rem;
-}
+ section.article>p{
+    font-size: 1.25rem;
+ }
 
 .inspirasjon {
     font-size: 1rem;
+    color: gray;
 }
 
 
@@ -176,6 +172,9 @@ section.article>p {
     width: 100%;
 }
 
-.signalApp main>section img {
-    width: 80%;
+.signalApp main > section img{
+    width:80%;
+}
+.signalApp ul{
+    list-style: circle;
 }
