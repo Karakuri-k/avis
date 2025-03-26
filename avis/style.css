@@ -9,6 +9,7 @@ html {
     box-sizing: inherit;
 }
 
+
 body,
 h1,
 h2,
@@ -49,6 +50,10 @@ body {
     --darkMode: rgb(37, 36, 59);
     --lightMode: #e7f0f4;
     --lightAccent: #d9e9f0;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -95,8 +100,8 @@ nav button {
     background-color: var(--lightAccent);
     width: 300px;
     z-index: 1000;
-    position: absolute;
-    right: 0;
+    position: fixed;
+    right: -300px;
     top: 74px;
 }
 
