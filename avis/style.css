@@ -167,3 +167,6 @@ section.article{
 .signalApp main > section img{
     width:80%;
 }
+.signalApp ul{
+    list-style: circle;
+}
