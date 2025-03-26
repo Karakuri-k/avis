@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Square News</title>
 </head>
+
 <body>
     <nav>
         <a href="index.html">Home</a>
@@ -23,29 +25,27 @@
                 <a href="#">Link 3</a>
             </div>
         </div>
-        <div class="setting">
-            <button id="settingBtn">
+
+        <div class="settings">
+            <button id="settingsBtn">
                 <i class="fa-solid fa-gear"></i>
             </button>
         </div>
     </nav>
+
     <main>
-
-
-        </article>
     </main>
-    <footer></footer>
 
-    <script>
-        function klikk() {
-            const dropdownElm = document.querySelector(".dropdown-content")
-            if (dropdownElm.style.display == "flex") {
-                dropdownElm.style.display = "none"
-            } else {
-                dropdownElm.style.display = "flex"
-            }
-        }
-    </script>
+    <footer></footer>
+    
+    <div class="settingsWindow">
+        <div class="darkmodeContainer">
+            <i class="fa-solid fa-sun"></i>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
