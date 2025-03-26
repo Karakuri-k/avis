@@ -6,3 +6,10 @@ function klikk() {
         dropdownElm.style.display = "flex"
     }
 }
+
+const darkModeKnapp = document.querySelector(".darkmodeContainer > i")
+
+darkModeKnapp.addEventListener("click", function() {
+    console.log("trykket")
+    document.body.style.backgroundColor = "var(--darkMode)"
+})

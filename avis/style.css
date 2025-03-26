@@ -39,11 +39,13 @@ body {
        margin på toppen for å ikke bli liggende "bak" den */
     margin-top: 74px;
     font-size: 16px;
+    height: 100vh;
 }
 /*css minimal reset ^*/
 :root {
     --purple: rgb(250, 189, 255);
-    --teal: rgb(149, 235, 231)
+    --teal: rgb(149, 235, 231);
+    --darkMode: rgb(37, 36, 59);
 }
 
 
@@ -56,12 +58,10 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1;
+    height: 74px;
+    background-color: var(--teal);
 }
 
-nav {
-    background-color: var(--teal);
-    height: 74px;
-}
 
 nav a,
 nav button {
@@ -94,7 +94,7 @@ nav button {
     z-index: 1000;
     position: absolute;
     right: 0;
-    top: 75px;
+    top: 74px;
 }
 
 
@@ -145,4 +145,20 @@ section.article{
     position: fixed;
     right: 0;
     margin-top: 0;
+}
+
+/* SignalApp*/
+.signalApp main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    padding: 20px;
+}
+.darkmodeContainer {
+    margin: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    
 }
