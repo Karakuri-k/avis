@@ -1,13 +1,37 @@
-* {
-    /* vår "minimal css reset" */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
 }
 
 img {
-    /* Bra å alltid ha med denne regelen også */
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 body {
@@ -15,21 +39,22 @@ body {
        margin på toppen for å ikke bli liggende "bak" den */
     margin-top: 100px;
     font-size: 16px;
+/*css minimal reset ^*/
+:root {
+    --purpleLight: rgb(234, 201, 237);
+    --tealLight: rgb(179, 231, 229)
 }
-
 nav {
     display: flex;
     justify-content: space-around;
-    /* Vi bruker position fixed for at navbar alltid skal synes i toppen */
     position: fixed;
     width: 100%;
     top: 0;
-    /* Pass på at navbaren ligger "over" annet innhold med z-index */
     z-index: 1;
 }
 
 nav {
-    background-color: aliceblue;
+    background-color: var(--tealLight);
 }
 
 nav a,
