@@ -37,7 +37,7 @@ img {
 body {
     /* Vår navbar har position fixed. Da må vi ha litt 
        margin på toppen for å ikke bli liggende "bak" den */
-    margin-top: 100px;
+    margin-top: 74px;
     font-size: 16px;
 }
 /*css minimal reset ^*/
@@ -48,6 +48,7 @@ body {
 nav {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     position: fixed;
     width: 100%;
     top: 0;
@@ -56,6 +57,7 @@ nav {
 
 nav {
     background-color: var(--teal);
+    height: 74px;
 }
 
 nav a,
@@ -64,7 +66,6 @@ nav button {
     color: darkblue;
     text-decoration: none;
     font-size: 30px;
-    padding: 20px;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -107,7 +108,7 @@ header.article{
     background-color: red;
     width: 300px;
     z-index: 1000;
-    position: absolute;
+    position: fixed;
     right: 0;
-    top: 75px;
+    margin-top: 0;
 }
