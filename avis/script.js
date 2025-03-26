@@ -9,15 +9,15 @@ function klikk() {
 
 const darkModeKnapp = document.querySelector(".darkmodeContainer > i")
 
-let dark = false
+let light = true
 darkModeKnapp.addEventListener("click", function() {
     console.log("trykket")
-    if (!dark) {
+    if (light) {
         document.body.style.backgroundColor = "var(--darkMode)"
-        dark = true
+        light = false
     } else {
         document.body.style.backgroundColor = "var(--lightMode)"
-        dark = false
+        light = true
     }
 })
 
@@ -26,7 +26,6 @@ const settingsWindow = document.querySelector(".settingsWindow")
 
 settings.addEventListener("click", function() {
     if (settingsWindow.style.right == "-300px") {
-
         settingsWindow.style.right = "0"
     } else {
         settingsWindow.style.right = "-300px"
