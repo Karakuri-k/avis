@@ -20,3 +20,16 @@ darkModeKnapp.addEventListener("click", function() {
         dark = false
     }
 })
+
+const settings = document.getElementById("settingsBtn")
+const settingsWindow = document.querySelector(".settingsWindow")
+
+settings.addEventListener("click", function() {
+    if (settingsWindow.style.right == "-300px") {
+
+        settingsWindow.style.right = "0"
+    } else {
+        settingsWindow.style.right = "-300px"
+    }
+
+})
