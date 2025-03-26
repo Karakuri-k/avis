@@ -165,11 +165,15 @@ section.article {
     gap: 30px;
 }
 
-.signalApp main section {
-    width: 100%;
+.signalApp p{
+    font-size:1.25rem;
+}
+
+.signalApp h3{
+    font-size: 2rem;
 }
 .signalApp section h1{
-    font-size: 40px; /*bytt når vi får root for h1*/
+    font-size: 48px; /*bytt når vi får root for h1*/
 } 
 .signalApp main > section img{
     width:90%;
