@@ -87,6 +87,16 @@ nav button {
     font-size: 18px;
     padding: 5px;
 }
+.settingsWindow {
+    height: 100vh;
+    background-color: red;
+    width: 300px;
+    z-index: 1000;
+    position: absolute;
+    right: 0;
+    top: 75px;
+}
+
 
 
 
@@ -113,12 +123,4 @@ header.article{
     padding: 0px 60px 60px 60px;
 }
 
-.settingsWindow {
-    height: 100vh;
-    background-color: red;
-    width: 300px;
-    z-index: 1000;
-    position: absolute;
-    right: 0;
-    top: 75px;
-}
+
