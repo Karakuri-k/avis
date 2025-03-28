@@ -170,15 +170,17 @@ main.article{
 
 
 
+/*temp*/
 
 aside{
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 80%;
     min-height: fit-content;
+    transform: translate(-50% , -50%);
 }
 .aside{
-    width: 250px;
+    width: 400px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -191,16 +193,17 @@ aside{
 }
 
 .aside h2{
+    font-size: 2rem;
     text-decoration: none;
     font-weight: 600;
     color: black;
+    text-align: center;
 }
-aside a{
-    text-decoration: none;
-}
+
 
 aside a:hover{
     box-shadow: 0px 10px 20px -10px black;
     text-decoration: underline; 
     text-decoration-line: black;
+    text-decoration-color: var(--darkAccent);
 }
