@@ -121,10 +121,6 @@ nav button {
     color: var(--purple);
 }
 
-/* Til artikler*/
-
-
-
 .darkmodeContainer , .dropdown-content a {
     margin: 1.25rem;
     display: flex;
@@ -175,6 +171,19 @@ main.article{
     box-shadow:  10px 10px 20px -5px  var(--lightAccent);
 }
 
+footer{
+    background-color: white;
+    width: 60%;
+    margin: 38px;
+    text-align: center;
+    text-decoration: none;
+    color: black
+}
+
+.bildeteskt{
+    
+}
+
 .inspirasjon {
     font-size: 1rem;
     color: var(--darkMode);
@@ -189,30 +198,39 @@ main.article{
 
 }
 
-
 aside{
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 80%;
     min-height: fit-content;
+    transform: translate(-50% , -50%);
 }
 .aside{
-    width: 250px;
+    width: 400px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-items: center;
     gap: 6px;
     padding: 20px;
-    background-color: white;
+    transition: ease-in-out ;
 
     
 }
+
 .aside h2{
+    font-size: 2rem;
     text-decoration: none;
     font-weight: 600;
     color: black;
+    text-align: center;
 }
-aside a{
-    text-decoration: none;
+
+
+aside a:hover{
+    box-shadow: 0px 10px 20px -10px black;
+    text-decoration: underline; 
+    text-decoration-line: black;
+    text-decoration-color: var(--darkAccent);
 }
+
