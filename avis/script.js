@@ -15,6 +15,7 @@ const settingsWindow = document.querySelector(".settingsWindow")
 const p = document.querySelector(".darkmodeContainer")
 const navOptions = document.querySelectorAll("nav a, nav button ")
 const dropdownLinks = document.querySelectorAll(".dropdown-content a")
+const dropdownLinkHovers = document.querySelectorAll(".dropdown-content a:hover")
 
 let light = true
 
@@ -32,6 +33,7 @@ darkModeKnapp.addEventListener("click", function() {
         dropdownLinks.forEach((dropdownLink) => {
             dropdownLink.style.color = "var(--darkModeText)"
         });
+        
 
 
         light = false
