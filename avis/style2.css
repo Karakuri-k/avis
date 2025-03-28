@@ -49,19 +49,16 @@ body {
 
 /*css minimal reset ^*/
 :root {
-    --purple: rgb(235, 161, 241);
-    --teal: rgb(101, 210, 205);
+    --purple: rgb(250, 189, 255);
+    --teal: rgb(149, 235, 231);
     --darkMode: rgb(37, 36, 59);
     --lightMode: #e7f0f4;
     --lightAccent: #d9e9f0;
     --darkAccent: #191832;
-    --darkModeText: #d5d5d5;
-    --lightModeText: #3D3D3D;
 }
 
-p, a {
+p {
     font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
 }
 
 
@@ -81,7 +78,8 @@ nav {
 nav a,
 nav button {
     background-color: inherit;
-    color: var(--purple);
+    color: darkblue;
+    text-decoration: none;
     font-size: 30px;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -99,7 +97,7 @@ nav button {
     width: 300px;
     z-index: 1000;
     position: fixed;
-    right:-300px;
+    right: -300px;
     top: 74px;
 }
 
@@ -117,33 +115,39 @@ nav button {
 
 
 /* Til artikler*/
+
 main.article{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 60%;
     height: fit-content;
-
-    margin: auto;
-    box-shadow: 0px 10px 20px -10px black;
     padding: 20px 60px 60px 60px;
     background-color: white;
+    margin: 38px;
 }
 
-header.article {
+.article h1{
+    font-weight: 300;
+}
+
+.article header{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 60px;
     padding-top: 10px;
 }
-header.article>p{
+.article header >p{
     padding:0 10px;
 }
 
-section.article {
+.article section {
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
- section.article>p{
+.article section >p{
     font-size: 1.25rem;
 }
 .sectionImg{
@@ -167,38 +171,29 @@ section.article {
 
 
 
-/* SignalApp css*/
-.signalApp main {
+aside{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    min-height: fit-content;
+}
+.aside{
+    width: 250px;
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 80%;
+    justify-items: center;
+    gap: 6px;
     padding: 20px;
-    gap: 30px;
-}
+    background-color: white;
 
-.signalApp p{
-    font-size:1.25rem;
+    
 }
-
-.signalApp h3{
-    font-size: 2rem;
+.aside h2{
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
 }
-.signalApp section h1{
-    font-size: 48px; /*bytt når vi får root for h1*/
-} 
-.signalApp main > section img{
-    width:90%;
-}
-.signalApp ul{
-    list-style: circle;
-    padding: 28px;
-}
-
-.brodtekst{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 25px;
+aside a{
+    text-decoration: none;
 }
