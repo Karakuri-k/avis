@@ -181,6 +181,7 @@ footer{
 }
 
 .bildetekst{
+    font-size: 0.875rem;
     
 }
 
@@ -198,11 +199,13 @@ footer{
 
 }
 
+/* aside*/
 aside{
     position: absolute;
     top: 30%;
     left: 80%;
     min-height: fit-content;
+    background-color: white;
     transform: translate(-50% , -50%);
 }
 .aside{
