@@ -97,7 +97,7 @@ nav button {
     width: 300px;
     z-index: 1000;
     position: fixed;
-    right: -300px;
+    right:-300px;
     top: 74px;
 }
 
