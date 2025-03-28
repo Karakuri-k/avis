@@ -32,13 +32,16 @@ darkModeKnapp.addEventListener("click", function() {
     }
 })
 
-const settings = document.getElementById("settingsBtn")
+const settings = document.querySelector(".settings")
 
 settings.addEventListener("click", function() {
-    if (settingsWindow.style.right == "-300px") {
-        settingsWindow.style.right = "0"
-    } else {
+    console.log("trykket settings")
+    if (settingsWindow.style.right == "0px") {
+        console.log("style right 0")
         settingsWindow.style.right = "-300px"
+    } else {
+        console.log("style right -300")
+        settingsWindow.style.right = "0"
     }
 
 })
