@@ -14,6 +14,7 @@ const navBar = document.querySelector("nav")
 const settingsWindow = document.querySelector(".settingsWindow")
 const p = document.querySelector(".darkmodeContainer")
 const navOptions = document.querySelectorAll("nav a, nav button ")
+const dropdownLinks = document.querySelectorAll(".dropdown-content a")
 
 let light = true
 
@@ -28,6 +29,9 @@ darkModeKnapp.addEventListener("click", function() {
             navOption.style.color = "var(--teal)"
         });
         dropdownElm.style.backgroundColor = "var(--darkAccent)"
+        dropdownLinks.forEach((dropdownLink) => {
+            dropdownLink.style.color = "var(--darkModeText)"
+        });
 
 
         light = false
@@ -40,6 +44,9 @@ darkModeKnapp.addEventListener("click", function() {
             navOption.style.color = "var(--purple)"
         });
         dropdownElm.style.backgroundColor = "var(--lightAccent)"
+        dropdownLinks.forEach((dropdownLink) => {
+            dropdownLink.style.color = "var(--lightModeText)"
+        });
 
         light = true
     }
