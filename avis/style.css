@@ -49,12 +49,14 @@ body {
 
 /*css minimal reset ^*/
 :root {
-    --purple: rgb(250, 189, 255);
-    --teal: rgb(149, 235, 231);
+    --purple: rgb(235, 161, 241);
+    --teal: rgb(101, 210, 205);
     --darkMode: rgb(37, 36, 59);
     --lightMode: #e7f0f4;
     --lightAccent: #d9e9f0;
     --darkAccent: #191832;
+    --darkModeText: #d5d5d5;
+    --lightModeText: #3D3D3D;
 }
 
 p {
@@ -78,7 +80,7 @@ nav {
 nav a,
 nav button {
     background-color: inherit;
-    color: darkblue;
+    color: var(--purple);
     text-decoration: none;
     font-size: 30px;
     border: none;
