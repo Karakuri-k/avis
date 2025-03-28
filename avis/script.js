@@ -1,5 +1,7 @@
+
+const dropdownElm = document.querySelector(".dropdown-content")
+
 function klikk() {
-    const dropdownElm = document.querySelector(".dropdown-content")
     if (dropdownElm.style.display == "flex") {
         dropdownElm.style.display = "none"
     } else {
@@ -10,7 +12,7 @@ function klikk() {
 const darkModeKnapp = document.querySelector(".darkmodeContainer > i")
 const navBar = document.querySelector("nav")
 const settingsWindow = document.querySelector(".settingsWindow")
-const p = document.querySelector("p")
+const p = document.querySelector(".darkmodeContainer")
 const navOptions = document.querySelectorAll("nav a, nav button ")
 
 let light = true
@@ -24,7 +26,9 @@ darkModeKnapp.addEventListener("click", function() {
         p.style.color = "var(--darkModeText)"
         navOptions.forEach((navOption) => {
             navOption.style.color = "var(--teal)"
-          });
+        });
+        dropdownElm.style.backgroundColor = "var(--darkAccent)"
+
 
         light = false
     } else {
@@ -34,7 +38,9 @@ darkModeKnapp.addEventListener("click", function() {
         p.style.color = "var(--lightModeText)"
         navOptions.forEach((navOption) => {
             navOption.style.color = "var(--purple)"
-          });
+        });
+        dropdownElm.style.backgroundColor = "var(--lightAccent)"
+
         light = true
     }
 })
