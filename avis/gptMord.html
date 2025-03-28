@@ -3,23 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
 
     <title>Chat-GPT mord</title>
 </head>
 <body>
     <nav>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="klikk()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
         <a href="index.html">Home</a>
         <a href="nyheter.html">News</a>
-        <div class="dropdown">
-            <button class="dropbtn" onclick="klikk()">Dropdown
-                <i class="fa fa-caret-down"></i>
+        <a href="sport.html">Sports</a>
+        
+        <div class="settings">
+            <button id="settingsBtn">
+                <i class="fa-solid fa-gear"></i>
             </button>
-            <div class="dropdown-content">
-                <a href="om-oss.html">Om oss</a>
-                <a href="spill.html">Spill</a>
-                <a href="#">Link 3</a>
+        </div>
     </nav>
+
+    <div class="dropdown-content">
+        <a href="om-oss.html">Om oss</a>
+        <a href="spill.html">Spill</a>
+        <a href="#">Link 3</a>
+    </div>
+
+    <div class="settingsWindow">
+        
+        <div class="darkmodeContainer">
+            <p>Light Mode </p>
+            <i class="fa-solid fa-sun"></i>
+        </div>
+    </div>
+
+ 
     <main class="article">
         <header >
             <h1>Nordmann klager inn OpenAI: ChatGPT påsto han hadde drept sine egne barn</h1>
@@ -74,6 +94,7 @@
         <footer>                Hentet fra: Tek.no 
             <br> 
             Nettside:<a href="https://www.tek.no/nyheter/nyhet/i/mPdJzv/nordmann-klager-inn-openai-chatgpt-paasto-han-hadde-drept-sine-egne-barn"> https://www.tek.no/nyheter/nyhet/i/mPdJzv/nordmann-klager-inn-openai-chatgpt-paasto-han-hadde-drept-sine-egne-barn </a></footer>
-    </main>
+    </main>   
+    <script src="script.js"></script>
 </body>
 </html>
