@@ -16,6 +16,8 @@ const p = document.querySelector(".darkmodeContainer")
 const navOptions = document.querySelectorAll("nav a, nav button ")
 const dropdownLinks = document.querySelectorAll(".dropdown-content a")
 const dropdownLinkHovers = document.querySelectorAll(".dropdown-content a:hover")
+const article = document.querySelector("main.article") 
+const footer = document.querySelector("footer")
 
 let light = true
 
@@ -37,8 +39,9 @@ darkModeKnapp.addEventListener("click", function() {
                 dropdownLink.color = "var(--teal)"
             };
         });
-
-
+        article.style.backgroundColor = "var(--darkAccent)"
+        article.style.color = "var(--darkModeText)"
+        footer.style.color = "var(--darkModeText)"
         light = false
     } else {
         document.body.style.backgroundColor = "var(--lightMode)"
@@ -56,6 +59,9 @@ darkModeKnapp.addEventListener("click", function() {
                 dropdownLink.color = "var(--purple)"
             };
         });
+        article.style.backgroundColor = "white"
+        article.style.color = "var(--lightModeText)"
+        footer.style.color = "var(--lightModeText)"
 
         light = true
     }
