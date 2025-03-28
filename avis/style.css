@@ -116,10 +116,6 @@ nav button {
 }
 
 
-/* Til artikler*/
-
-
-
 .darkmodeContainer , .dropdown-content a {
     margin: 1.25rem;
     display: flex;
@@ -168,6 +164,19 @@ main.article{
 }
 .sectionImg{
     box-shadow:  10px 10px 20px -5px  var(--lightAccent);
+}
+
+footer{
+    background-color: white;
+    width: 60%;
+    margin: 38px;
+    text-align: center;
+    text-decoration: none;
+    color: black
+}
+
+.bildeteskt{
+    
 }
 
 .inspirasjon {
