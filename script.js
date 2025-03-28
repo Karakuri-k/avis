@@ -32,8 +32,11 @@ darkModeKnapp.addEventListener("click", function() {
         dropdownElm.style.backgroundColor = "var(--darkAccent)"
         dropdownLinks.forEach((dropdownLink) => {
             dropdownLink.style.color = "var(--darkModeText)"
+            dropdownLink.onmouseenter = function(){
+                console.log("mouse enter")
+                dropdownLink.color = "var(--teal)"
+            };
         });
-        
 
 
         light = false
@@ -48,11 +51,32 @@ darkModeKnapp.addEventListener("click", function() {
         dropdownElm.style.backgroundColor = "var(--lightAccent)"
         dropdownLinks.forEach((dropdownLink) => {
             dropdownLink.style.color = "var(--lightModeText)"
+            dropdownLink.onmouseenter = function(){
+                console.log("mouse enter")
+                dropdownLink.color = "var(--purple)"
+            };
         });
 
         light = true
     }
 })
+dropdownLinks.forEach(dropdownLink => dropdownLink.addEventListener("mouseenter", function() {
+    console.log("mouse enter");
+    if (light) {
+        dropdownLink.style.color = "var(--purple)";
+    } else {
+        dropdownLink.style.color = "var(--teal)";
+    }
+}));
+dropdownLinks.forEach(dropdownLink => dropdownLink.addEventListener("mouseleave", function() {
+    console.log("mouse enter");
+    if (light) {
+        dropdownLink.style.color = "var(--lightmodeText";
+    } else {
+        dropdownLink.style.color = "var(--darkModeText)";
+    }
+}));    
+
 
 const settings = document.querySelector(".settings")
 
