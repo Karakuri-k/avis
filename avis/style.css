@@ -114,7 +114,12 @@ nav button {
     left: 0px;
     top: 74px;
 }
-
+.dropdown-content a {
+    color: var(--lightModeText);
+}
+.dropdown-content a:hover{
+    color: var(--purple);
+}
 
 /* Til artikler*/
 
