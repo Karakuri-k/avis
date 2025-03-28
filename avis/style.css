@@ -202,3 +202,43 @@ section.article {
     align-items: flex-start;
     gap: 25px;
 }
+
+
+
+
+
+/*temp*/
+
+aside{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    min-height: fit-content;
+}
+.aside{
+    width: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 6px;
+    padding: 20px;
+    transition: ease-in-out ;
+
+    
+}
+
+.aside h2{
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+aside a{
+    text-decoration: none;
+}
+
+aside a:hover{
+    box-shadow: 0px 10px 20px -10px black;
+    text-decoration: underline; 
+    text-decoration-line: black;
+}
