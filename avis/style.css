@@ -59,8 +59,9 @@ body {
     --lightModeText: #3D3D3D;
 }
 
-p {
+p, a {
     font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
 
@@ -81,7 +82,6 @@ nav a,
 nav button {
     background-color: inherit;
     color: var(--purple);
-    text-decoration: none;
     font-size: 30px;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
