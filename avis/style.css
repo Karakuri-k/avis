@@ -54,6 +54,7 @@ body {
     --darkMode: rgb(37, 36, 59);
     --lightMode: #e7f0f4;
     --lightAccent: #d9e9f0;
+    --darkAccent: #191832;
 }
 
 p {
