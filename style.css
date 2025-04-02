@@ -117,9 +117,6 @@ nav button {
 .dropdown-content a {
     color: var(--lightModeText);
 }
-.dropdown-content a:hover{
-    color: var(--purple);
-}
 
 .darkmodeContainer , .dropdown-content a {
     margin: 1.25rem;
@@ -154,6 +151,7 @@ main.article{
     align-items: center;
     padding-bottom: 60px;
     padding-top: 10px;
+    gap: 20px;
 }
 .article header >p{
     padding:0 10px;
@@ -171,8 +169,8 @@ main.article{
     box-shadow:  10px 10px 20px -5px  var(--lightAccent);
 }
 
-footer{
-    background-color: white;
+footer {
+    background-color: none;
     width: 60%;
     margin: 38px;
     text-align: center;
@@ -181,6 +179,7 @@ footer{
 }
 
 .bildetekst{
+    font-size: 0.875rem;
     
 }
 
@@ -198,11 +197,13 @@ footer{
 
 }
 
+/* aside*/
 aside{
     position: absolute;
     top: 30%;
     left: 80%;
     min-height: fit-content;
+    background-color: white;
     transform: translate(-50% , -50%);
 }
 .aside{
