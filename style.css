@@ -46,9 +46,9 @@ body {
     height: 100vh;
     background-color: var(--lightMode);
 }
-body.index {
+body.hovedside {
     background-color: blue;
-    
+    background: url("bilder/placeholderBilde.jpg") no-repeat fixed center;
 }
 
 /*css minimal reset ^*/
@@ -129,7 +129,7 @@ nav button {
     font-size: 1.25rem;
     user-select: none;
 }
-main.index {
+main.hovedside {
     height: fit-content;
     width: 100%;
     background-color: red;
@@ -139,9 +139,8 @@ main.index {
     gap: 2rem;
     justify-content: center;
     margin-top: 100vh;
-    z-index: 200;
 }
-.index > div {
+main.hovedside > div {
     background-color: green;
 }
 
