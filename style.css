@@ -197,6 +197,17 @@ footer {
 
 }
 
+section h3{
+    font-size: 1.40rem;
+    font-weight: bold;
+}
+
+article ol,ul{
+    list-style: decimal;
+    margin-left: 40px;
+    font-size: 1.25rem;
+}
+
 /* aside*/
 aside{
     position: absolute;
