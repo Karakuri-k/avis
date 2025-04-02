@@ -16,7 +16,7 @@ const p = document.querySelector(".darkmodeContainer")
 const navOptions = document.querySelectorAll("nav a, nav button ")
 const dropdownLinks = document.querySelectorAll(".dropdown-content a")
 const dropdownLinkHovers = document.querySelectorAll(".dropdown-content a:hover")
-const article = document.querySelector("main.article") 
+const articles = document.querySelectorAll(".article") 
 const footer = document.querySelector("footer")
 
 let light = true
@@ -39,8 +39,10 @@ darkModeKnapp.addEventListener("click", function() {
                 dropdownLink.color = "var(--teal)"
             };
         });
-        article.style.backgroundColor = "var(--darkAccent)"
-        article.style.color = "var(--darkModeText)"
+        articles.forEach((article) => {
+            article.style.backgroundColor = "var(--darkAccent)"
+            article.style.color = "var(--darkModeText)"
+        });
         footer.style.color = "var(--darkModeText)"
         light = false
     } else {
@@ -59,13 +61,16 @@ darkModeKnapp.addEventListener("click", function() {
                 dropdownLink.color = "var(--purple)"
             };
         });
-        article.style.backgroundColor = "white"
-        article.style.color = "var(--lightModeText)"
+        articles.forEach((article) => {
+            article.style.backgroundColor = "white"
+            article.style.color = "var(--lightModeText)"
+        });
         footer.style.color = "var(--lightModeText)"
 
         light = true
     }
 })
+//jeg vet forresten at jeg kan bruke classes til darkmode og lightmode, men det her var litt mer gøy å finne ut av. og ville vise at jeg visste  man kan gjøre det på denne måten også
 dropdownLinks.forEach(dropdownLink => dropdownLink.addEventListener("mouseenter", function() {
     console.log("mouse enter");
     if (light) {
