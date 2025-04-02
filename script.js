@@ -1,5 +1,15 @@
 
 const dropdownElm = document.querySelector(".dropdown-content")
+const sokeMotor = document.getElementById("sokeMotor")
+const sokDropdown = document.querySelector(".sokDropdown")
+let sakene=[
+    "23andMe i krise - Frykt for misbruk av genetiske data",
+    "Kineserne tetter luken i KI kappløpet med hjelp fra DeepSeek AI.",
+    "Her ligger «internett»",
+    "Nordmann klager inn OpenAI: ChatGPT påsto han hadde drept sine egne barn",
+    "Personvern fiasko - eller rett og slett en dum feil?"   
+]
+
 
 function klikk() {
     if (dropdownElm.style.display == "flex") {
@@ -98,3 +108,18 @@ settings.addEventListener("click", function() {
     }
 
 })
+
+// til søkemotor
+    sokeMotor.addEventListener('input', function(){
+        let tittel = this.value.toLowerCase()
+        sakene.forEach(element =>{
+            if(element.toLocaleLowerCase().includes(tittel)){
+                let søkemotorSak = document.createElement("a")
+                sokDropdown.appendChild(søkemotorSak)
+                søkemotorSak.innerHTML= element
+            }
+        })
+
+    } 
+        
+    )
