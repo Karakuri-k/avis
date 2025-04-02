@@ -66,6 +66,7 @@ darkModeKnapp.addEventListener("click", function() {
         light = true
     }
 })
+//jeg vet forresten at jeg kan bruke classes til darkmode og lightmode, men det her var litt mer gøy å finne ut av. og ville vise at jeg visste at man kan gjøre det på denne måten også
 dropdownLinks.forEach(dropdownLink => dropdownLink.addEventListener("mouseenter", function() {
     console.log("mouse enter");
     if (light) {
