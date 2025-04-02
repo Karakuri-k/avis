@@ -212,7 +212,12 @@ footer {
     font-size: 1.25rem;
 
 }
-
+section li{
+    font-size: 1.25rem;
+}
+b{
+    font-size: 1.25rem;
+}
 section h3{
     font-size: 1.40rem;
     font-weight: bold;
