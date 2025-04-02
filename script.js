@@ -115,6 +115,8 @@ settings.addEventListener("click", function() {
 
 // til søkemotor
     sokeMotor.addEventListener('input', function(){
+        //slette ekstra tekst
+            sokDropdown.innerHTML=""
         let tittel = this.value.toLowerCase()
         sakene.forEach(element =>{
             if(element.toLocaleLowerCase().includes(tittel)){
