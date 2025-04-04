@@ -62,6 +62,7 @@ darkModeKnapp.addEventListener("click", function() {
         });
         footer.style.color = "var(--darkModeText)"
         document.querySelector(".logo").src = "bilder/logoDarkMode.svg"
+        document.querySelector("body.hovedside").style.background = 'url("bilder/backgroundImgDark.svg") no-repeat fixed center'
         light = false
     } else {
         document.body.style.backgroundColor = "var(--lightMode)"
@@ -85,6 +86,7 @@ darkModeKnapp.addEventListener("click", function() {
         });
         footer.style.color = "var(--lightModeText)"
         document.querySelector(".logo").src = "bilder/logoLightMode.svg"
+        document.querySelector("body.hovedside").style.background = 'url("bilder/backgroundImgLight.svg") no-repeat fixed center'
 
         light = true
     }
