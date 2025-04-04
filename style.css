@@ -144,6 +144,23 @@ main.hovedside > div {
     background-color: green;
 }
 
+#sokeElementer{
+    display: flex;
+    flex-direction: column;
+
+}
+.sokDropdown{
+    position: absolute;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+.sokDropdown>*{
+    padding: 10px;
+    background-color: white;
+    border: solid 1px black;
+}
+
 /* Artikler*/
 
 main.article{
