@@ -162,11 +162,12 @@ main.hovedside > div {
 }
 .sokDropdown{
     position: absolute;
-    top: 80px;
+    top: 74px;
     display: flex;
     flex-direction: column;
     font-family: inherit;
-    background-color: var(--lightAccent);
+    background-color: white;
+    max-width: 600px;
 }
 .sokDropdown>*{
     padding: 10px;
