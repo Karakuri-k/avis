@@ -9,7 +9,14 @@ let sakene=[
     "Nordmann klager inn OpenAI: ChatGPT påsto han hadde drept sine egne barn",
     "Personvern fiasko - eller rett og slett en dum feil?"   
 ]
-
+let sakeneLink=[
+    "23andme.html",
+    "deepseekai.html",
+    "fiberdør.html",
+    "gptMord.html",
+    "placeholder.html",
+    "signalApp.html"
+]
 
 function klikk() {
     if (dropdownElm.style.display == "flex") {
@@ -55,6 +62,7 @@ darkModeKnapp.addEventListener("click", function() {
         });
         footer.style.color = "var(--darkModeText)"
         document.querySelector(".logo").src = "bilder/logoDarkMode.svg"
+        document.querySelector("body.hovedside").style.background = 'url("bilder/backgroundImgDark.svg") no-repeat fixed center'
         light = false
     } else {
         document.body.style.backgroundColor = "var(--lightMode)"
@@ -78,6 +86,7 @@ darkModeKnapp.addEventListener("click", function() {
         });
         footer.style.color = "var(--lightModeText)"
         document.querySelector(".logo").src = "bilder/logoLightMode.svg"
+        document.querySelector("body.hovedside").style.background = 'url("bilder/backgroundImgLight.svg") no-repeat fixed center'
 
         light = true
     }
@@ -120,14 +129,19 @@ settings.addEventListener("click", function() {
         //slette ekstra tekst
             sokDropdown.innerHTML=""
         let tittel = this.value.toLowerCase()
-        sakene.forEach(element =>{
-            if(element.toLocaleLowerCase().includes(tittel)){
-                let søkemotorSak = document.createElement("a")
-                sokDropdown.appendChild(søkemotorSak)
-                søkemotorSak.innerHTML= element
+        for (let i = 0; i < sakene.length; i++) {
+            const element = sakene[i];
+            const link = sakeneLink[i]
+            if (tittel== ""){
+                console.log(ingenting)
             }
-        })
-
-    } 
+            else if(element.toLocaleLowerCase().includes(tittel)){
+                let sokemotorSak = document.createElement("a")
+                sokDropdown.appendChild(sokemotorSak)
+                sokemotorSak.innerHTML= element
+                sokemotorSak.href = "artikler/"+link
+            }
+           
         
-    )
+        }
+    })

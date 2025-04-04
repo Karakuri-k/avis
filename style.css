@@ -47,8 +47,9 @@ body {
     background-color: var(--lightMode);
 }
 body.hovedside {
-    background-color: blue;
-    background: url("bilder/placeholderBilde.jpg") no-repeat fixed center;
+    background-color: var(--darkMode);
+    background: url("bilder/backgroundImgLight.svg") no-repeat fixed center;
+
 }
 
 /*css minimal reset ^*/
@@ -83,7 +84,7 @@ nav {
     background-color: var(--lightAccent);
 }
 
-nav a,
+nav>a,
 nav button {
     background-color: inherit;
     color: var(--purple);
@@ -145,6 +146,38 @@ main.hovedside {
 }
 main.hovedside > div {
     background-color: green;
+}
+/* søkemotoren */
+#sokeMotor{
+    height: 34px;
+    min-width: fit-content;
+    border-radius: 10px;
+    
+}
+#sokeElementer{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+ font-family: inherit;
+}
+.sokDropdown{
+    position: absolute;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    font-family: inherit;
+    background-color: var(--lightAccent);
+}
+.sokDropdown>*{
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: var(--lightModeText);
+    font-size: 1.25rem;
+}
+.sokDropdown>*:hover{
+    text-decoration: underline;
+
 }
 
 /* Artikler*/
