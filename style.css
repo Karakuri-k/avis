@@ -63,7 +63,8 @@ body.hovedside {
     --lightModeText: #3D3D3D;
 }
 
-p, a {
+p,
+a {
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
@@ -103,7 +104,7 @@ nav button {
     width: 300px;
     z-index: 1000;
     position: fixed;
-    right:-300px;
+    right: -300px;
     top: 74px;
 }
 
@@ -118,11 +119,13 @@ nav button {
     left: 0px;
     top: 74px;
 }
+
 .dropdown-content a {
     color: var(--lightModeText);
 }
 
-.darkmodeContainer , .dropdown-content a {
+.darkmodeContainer,
+.dropdown-content a {
     margin: 1.25rem;
     display: flex;
     justify-content: space-between;
@@ -163,7 +166,7 @@ main.hovedside > div {
 
 /* Artikler*/
 
-main.article{
+main.article {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -174,11 +177,11 @@ main.article{
     margin: 38px;
 }
 
-.article h1{
+.article h1 {
     font-weight: 300;
 }
 
-.article header{
+.article header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -186,8 +189,9 @@ main.article{
     padding-top: 10px;
     gap: 20px;
 }
-.article header >p{
-    padding:0 10px;
+
+.article header>p {
+    padding: 0 10px;
 }
 
 .article section {
@@ -195,11 +199,13 @@ main.article{
     flex-direction: column;
     gap: 50px;
 }
-.article section >p{
+
+.article section>p {
     font-size: 1.25rem;
 }
-.sectionImg{
-    box-shadow:  10px 10px 20px -5px  var(--lightAccent);
+
+.sectionImg {
+    box-shadow: 10px 10px 20px -5px var(--lightAccent);
 }
 
 footer {
@@ -219,7 +225,7 @@ footer.hovedside {
 }
 .bildetekst{
     font-size: 0.875rem;
-    
+
 }
 
 .inspirasjon {
@@ -228,7 +234,8 @@ footer.hovedside {
 }
 
 
-.darkmodeContainer , .dropdown-content a {
+.darkmodeContainer,
+.dropdown-content a {
     margin: 1.25rem;
     display: flex;
     justify-content: space-between;
@@ -246,22 +253,24 @@ section h3{
     font-weight: bold;
 }
 
-article ol,ul{
+article ol,
+ul {
     list-style: decimal;
     margin-left: 40px;
     font-size: 1.25rem;
 }
 
 /* aside*/
-aside{
+aside {
     position: absolute;
     top: 30%;
     left: 80%;
     min-height: fit-content;
     background-color: white;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
 }
-.aside{
+
+.aside {
     width: 400px;
     position: relative;
     display: flex;
@@ -269,12 +278,12 @@ aside{
     justify-items: center;
     gap: 6px;
     padding: 20px;
-    transition: ease-in-out ;
+    transition: ease-in-out;
 
-    
+
 }
 
-.aside h2{
+.aside h2 {
     font-size: 2rem;
     text-decoration: none;
     font-weight: 600;
@@ -283,9 +292,9 @@ aside{
 }
 
 
-aside a:hover{
+aside a:hover {
     box-shadow: 0px 10px 20px -10px black;
-    text-decoration: underline; 
+    text-decoration: underline;
     text-decoration-line: black;
     text-decoration-color: var(--darkAccent);
 }
@@ -299,4 +308,55 @@ aside a:hover{
 .artikkelSju {
     grid-row: 4/6;
     grid-column: 1/3;
+}
+
+.aboutus {
+    width: 80%;
+    margin: auto;
+}
+
+.aboutus header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.aboutus h1 {
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+.aboutus h2 {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.aboutus section p {
+    font-size: 1.25rem;
+}
+
+section.gruppa {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.aboutus .profil {
+    width: 300px;
+    padding: 20px;
+    border-radius: 50%;
+    height: 300px;
+    object-fit: cover;
+    background-color: black;
+    margin: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutus .visible{
+    color: white;
+    z-index: 1000;
 }

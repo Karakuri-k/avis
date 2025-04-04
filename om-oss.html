@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om oss</title>
+    <link rel="icon" type="image/svg" href="bilder/logoLightMode.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+
+<body class="omoss">
     <nav>
         <div class="dropdown">
             <button class="dropbtn" onclick="klikk()">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
-        <a href="index.html">Home</a>
+        <a href="index.html">
+            <img class="logo" src="bilder/logoLightMode.svg" alt="">
+        </a>
         <a href="nyheter.html">News</a>
         <a href="sport.html">Sports</a>
-        
+
         <div class="settings">
             <button id="settingsBtn">
                 <i class="fa-solid fa-gear"></i>
@@ -33,14 +38,62 @@
     </div>
 
     <div class="settingsWindow">
-        
+
         <div class="darkmodeContainer">
             <p>Light Mode </p>
             <i class="fa-solid fa-sun"></i>
         </div>
     </div>
+    <main class="aboutus">
+        <header>
+            <h1>Om Oss</h1>
+            <img src="bilder/aboutus.jpg" alt="">
+        </header>
+        <br>
+        <article>
+            <section>
+                <p>Velkommen til vårt online avisprosjekt! Vi er fire engasjerte VG2 elever som har gått sammen for å
+                    utvikle denne digitale avisen som en del av IT-faget. Prosjektet er et spennende samspill mellom
+                    teknologi og journalistikk, hvor vi ønsker å utforske hvordan digitale medier kan brukes til å
+                    formidle
+                    nyheter på en effektiv og interessant måte.</p>
+                <br>
+                <p>Vårt hovedmål er å levere innhold som er både informativt og engasjerende, samtidig som vi gjør det
+                    lett
+                    tilgjengelig for alle. Vi ønsker å dekke et bredt spekter av temaer, fra dagsaktuelle hendelser og
+                    sport
+                    til underholdning og teknologi. Med en brukervennlig og moderne plattform håper vi å gjøre det
+                    enkelt
+                    for leserne våre å holde seg oppdatert på det som skjer i verden.</p>
+                <br>
+                <p>Vi ser dette ikke bare som en skoleoppgave, men som en unik mulighet til å skape noe verdifullt, lære
+                    mer om nettutvikling og journalistikk, og forhåpentligvis engasjere et bredere publikum. Takk for at
+                    du</p>
+            </section>
+            <section class="gruppa">
+                <div class="profil">
+                    <div class="visible"> Askil </div>
+                    <div class="invisible"></div>
+                </div>
+                <div class="profil">
+                    <div class="visible">Anne-Marie</div>
+                    <div class="invisible"></div>
+                </div>
+                <div class="profil">
+                    <div class="visible">Jeppe</div>
+                    <div class="invisible"></div>
+                </div>
+                <div class="profil">
+                    <div class="visible">Karen</div>
+                    <div class="invisible"></div>
+                    <!-- SKAL LAGE EN JS FUNKSJON FOR Å FIKSE DETTE-->
+                </div>
+            </section>
+        </article>
+    </main>
 
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>

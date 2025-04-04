@@ -54,6 +54,7 @@ darkModeKnapp.addEventListener("click", function() {
             article.style.color = "var(--darkModeText)"
         });
         footer.style.color = "var(--darkModeText)"
+        document.querySelector(".logo").src = "bilder/logoDarkMode.svg"
         light = false
     } else {
         document.body.style.backgroundColor = "var(--lightMode)"
@@ -76,6 +77,7 @@ darkModeKnapp.addEventListener("click", function() {
             article.style.color = "var(--lightModeText)"
         });
         footer.style.color = "var(--lightModeText)"
+        document.querySelector(".logo").src = "bilder/logoLightMode.svg"
 
         light = true
     }
