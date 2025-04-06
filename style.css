@@ -379,3 +379,38 @@ section.gruppa {
     color: white;
     z-index: 1000;
 }
+
+/* til sok.html */
+#sokContainer{
+    padding:30px 0;
+}
+#sokContainer>a{
+    display: flex;
+    height: 150px;
+    text-decoration: none;
+    gap: 30px;
+    margin: 30px;
+    border: solid var(--lightModeText) 1px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+#sokContainer h3{
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+   
+}
+#sokContainer img{
+    width: 260px;
+}
+
+#sokContainer a:hover {
+    text-decoration: underline;
+    text-decoration-line: black;
+    text-decoration-color: var(--darkAccent);
+}
