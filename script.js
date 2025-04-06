@@ -2,6 +2,7 @@
 const dropdownElm = document.querySelector(".dropdown-content")
 const sokeMotor = document.getElementById("sokeMotor")
 const sokDropdown = document.querySelector(".sokDropdown")
+
 let sakene=[
     "23andMe i krise - Frykt for misbruk av genetiske data",
     "Kineserne tetter luken i KI kappløpet med hjelp fra DeepSeek AI.",
@@ -17,6 +18,32 @@ let sakeneLink=[
     "placeholder.html"
 ]
 
+let sakeneLink=[
+    "23andme",
+    "deepseekai",
+    "fiberdør",
+    "gptMord",
+    "signalApp",
+    "metaprotest",
+    "facebookannonser"
+]
+//objekter som skal lagres og ikke skal vises i sok.html
+let skjulteElm = []
+
+if(window.location.href.includes("sok")==false){
+    console.log("du er ikke i sok.html")
+    localStorage.clear()
+} else{console.log("du er i sok")
+    sakeneLink.forEach(element =>{
+        
+        if(localStorage.getItem(element)){
+            let hidden = document.getElementById(element)
+            hidden.style.display="none"
+        }
+    })
+}
+
+console.log(localStorage)
 function klikk() {
     if (dropdownElm.style.display == "flex") {
         dropdownElm.style.display = "none"
@@ -77,8 +104,10 @@ settings.addEventListener("click", function() {
 
 // til søkemotor
     sokeMotor.addEventListener('input', function(){
-        //slette ekstra tekst
+        //slette ekstra tekst og objekter
             sokDropdown.innerHTML=""
+            skjulteElm= []
+
         let tittel = this.value.toLowerCase()
         for (let i = 0; i < sakene.length; i++) {
             const element = sakene[i];
@@ -86,14 +115,24 @@ settings.addEventListener("click", function() {
             if (tittel == "") {
                 console.log("No input provided");
                 //askil. dette funker ikke. ingenting er faktisk ingenting for pcen. stakkars pc^- hilsen bendik
+                //nå er det fikset - hilsen askil
             }
             else if(element.toLocaleLowerCase().includes(tittel)){
                 let sokemotorSak = document.createElement("a")
                 sokDropdown.appendChild(sokemotorSak)
                 sokemotorSak.innerHTML= element
-                sokemotorSak.href = "../artikler/"+link
+                sokemotorSak.href = "../artikler/"+link+".html"
+            } else if(element.toLocaleLowerCase().includes(tittel)==false){
+                skjulteElm.push(link)
             }
            
         
         }
+
     })
+   function lagreElm(){
+    
+    skjulteElm.forEach(element => {
+        localStorage.setItem(element,element)
+    });
+   }

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sport</title>
     <link rel="icon" type="image/svg" href="bilder/logoLightMode.svg">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Søk</title>
 </head>
-
 <body>
     <nav>
         <div class="dropdown">
@@ -38,19 +37,53 @@
         </div>
     
     </nav>
+    
     <div class="dropdown-content">
         <a href="om-oss.html">Om oss</a>
         <a href="spill.html">Games</a>
         <a href="#">Link 3</a>
     </div>
+   
     <div class="settingsWindow">
-
+        
         <div class="darkmodeContainer">
             <p>Light Mode </p>
             <i class="fa-solid fa-sun"></i>
         </div>
     </div>
-    <script src="script.js"></script>
+    <main>
+    <div id="sokContainer">
+        <a href="artikler/23andme.html" id="23andme">
+            <img src="bilder/23andme.webp" alt="">
+            <h3>23andMe i krise - Frykt for misbruk av genetiske data</h3>
+        </a>
+        <a href="artikler/deepseekai.html" id="deepseekai">
+            <img src="bilder/deepseek.webp" alt="">
+            <h3>Kineserne tetter luken i KI kappløpet med hjelp fra DeepSeek AI.</h3>
+        </a>
+        <a href="artikler/fiberdør.html" id="fiberdør">
+            <img src="bilder/fiberdør.avif" alt="">
+            <h3>Her ligger «internett»</h3>
+        </a>
+        <a href="artikler/gptMord.html" id="gptMord">
+            <img src="bilder/gptMord-front.avif" alt="">
+            <h3>Nordmann klager inn OpenAI: ChatGPT påsto han hadde drept sine egne barn</h3>
+        </a>
+        <a href="artikler/signalApp.html" id="signalApp">
+            <img src="bilder/mikewaltz.avif" alt="">
+            <h3>Personvern fiasko - eller rett og slett en dum feil?</h3>
+        </a>
+        <a href="artikler/metaprotest.html" id="metaprotest">
+            <img src="bilder/jackstrange.webp" alt="">
+            <h3>Forfattere protesterer mot Meta: "Vi må si ifra"</h3>
+        </a>
+        <a href="artikler/facebookannonser.html" id="facebookannonser">
+            <img src="bilder/tanyaocarroll.webp" alt="">
+            <h3>Facebook stopper målrettede annonser mot britisk kvinne etter rettslig kamp</h3>
+        </a>
+    </div>
+</main>
+<footer></footer>
+    <script src="script.js" ></script>
 </body>
-
 </html>
