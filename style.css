@@ -27,10 +27,10 @@ ul {
     padding: 0;
     font-weight: normal;
 }
-p, i{
-    color: var(--lightModeText)'';
+p, i, h3, a {
+    color: var(--lightModeText);
 }
-.darkMode p, .darkMode i {
+.darkMode p, .darkMode i, .darkMode h3, .darkMode a {
     color: var(--darkModeText);
 }
 
@@ -475,7 +475,6 @@ section.gruppa {
     font-size: 2rem;
     text-decoration: none;
     font-weight: 400;
-    color: black;
     text-align: center;
     height: 100%;
     padding: 10px;
@@ -485,10 +484,17 @@ section.gruppa {
     width: 260px;
 }
 
-#sokContainer a:hover {
-    text-decoration: underline;
-    text-decoration-line: black;
-    text-decoration-color: var(--darkAccent);
+#sokContainer a:hover h3 , .sokDropdown>*:hover{
+    color: var(--purple);
+}
+#sokContainer a:hover, .sokDropdown>*:hover{
+    text-decoration: underline var(--purple);
+}
+.darkMode #sokContainer a:hover h3 , .darkMode .sokDropdown>*:hover{
+    color: var(--teal);
+}
+.darkMode #sokContainer a:hover , .darkMode .sokDropdown>*:hover{
+    text-decoration: underline var(--teal);
 }
 @media (width <= 1000px) {
     main.hovedside {
