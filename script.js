@@ -3,16 +3,16 @@ const dropdownElm = document.querySelector(".dropdown-content")
 const sokeMotor = document.getElementById("sokeMotor")
 const sokDropdown = document.querySelector(".sokDropdown")
 
-let sakene=[
+let sakene = [
     "23andMe i krise - Frykt for misbruk av genetiske data",
     "Kineserne tetter luken i KI kappløpet med hjelp fra DeepSeek AI.",
     "Her ligger «internett»",
     "Nordmann klager inn OpenAI: ChatGPT påsto han hadde drept sine egne barn",
-    "Personvern fiasko - eller rett og slett en dum feil?"   
+    "Personvern fiasko - eller rett og slett en dum feil?"
 ]
 
 
-let sakeneLink=[
+let sakeneLink = [
     "23andme",
     "deepseekai",
     "fiberdør",
@@ -24,15 +24,16 @@ let sakeneLink=[
 //objekter som skal lagres og ikke skal vises i sok.html
 let skjulteElm = []
 
-if(window.location.href.includes("sok")==false){
+if (window.location.href.includes("sok") == false) {
     console.log("du er ikke i sok.html")
 
-} else{console.log("du er i sok")
-    sakeneLink.forEach(element =>{
-        
-        if(localStorage.getItem(element)){
+} else {
+    console.log("du er i sok")
+    sakeneLink.forEach(element => {
+
+        if (localStorage.getItem(element)) {
             let hidden = document.getElementById(element)
-            hidden.style.display="none"
+            hidden.style.display = "none"
             localStorage.removeItem(element)
         }
     })
@@ -73,9 +74,9 @@ function darkModeLightMode() {
         localStorage.setItem("light", true)
     }
 }
-window.onload = function() {
+window.onload = function () {
     if (localStorage.getItem("light") === "false") {
-        light = true 
+        light = true
         darkModeTekst.innerHTML = "Light Mode"
         darkModeIcon.classList.remove("fa-moon")
         darkModeIcon.classList.add("fa-sun")
@@ -89,12 +90,12 @@ window.onload = function() {
 darkModeKnapp.addEventListener("click", darkModeLightMode)
 
 //ok, vi prøver classes i stedet
-   
+
 
 
 const settings = document.querySelector(".settings")
 
-settings.addEventListener("click", function() {
+settings.addEventListener("click", function () {
     console.log("trykket settings")
     if (settingsWindow.style.right == "0px") {
         console.log("style right 0")
@@ -107,37 +108,38 @@ settings.addEventListener("click", function() {
 })
 
 // til søkemotor
-    sokeMotor.addEventListener('input', function(){
-        //slette ekstra tekst og objekter
-            sokDropdown.innerHTML=""
-            skjulteElm= []
+sokeMotor.addEventListener('input', function () {
+    //slette ekstra tekst og objekter
+    sokDropdown.innerHTML = ""
+    skjulteElm = []
 
-        let tittel = this.value.toLowerCase()
-        for (let i = 0; i < sakene.length; i++) {
-            const element = sakene[i];
-            const link = sakeneLink[i]
-            if (tittel == "") {
-                console.log("No input provided");
-                //askil. dette funker ikke. ingenting er faktisk ingenting for pcen. stakkars pc^- hilsen bendik
-                //nå er det fikset - hilsen askil
-                //tusen takk - hilsen karen
-            }
-            else if(element.toLocaleLowerCase().includes(tittel)){
-                let sokemotorSak = document.createElement("a")
-                sokDropdown.appendChild(sokemotorSak)
-                sokemotorSak.innerHTML= element
-                sokemotorSak.href = "../artikler/"+link+".html"
-            } else if(element.toLocaleLowerCase().includes(tittel)==false){
-                skjulteElm.push(link)
-            }
-           
-        
+    let tittel = this.value.toLowerCase()
+    for (let i = 0; i < sakene.length; i++) {
+        const element = sakene[i];
+        const link = sakeneLink[i]
+        if (tittel == "") {
+            console.log("No input provided");
+            //askil. dette funker ikke. ingenting er faktisk ingenting for pcen. stakkars pc^- hilsen bendik
+            //nå er det fikset - hilsen askil
+            //tusen takk - hilsen karen
+        }
+        else if (element.toLocaleLowerCase().includes(tittel)) {
+            let sokemotorSak = document.createElement("a")
+            sokDropdown.appendChild(sokemotorSak)
+            sokemotorSak.innerHTML = element
+            sokemotorSak.href = "../artikler/" + link + ".html"
+        } else if (element.toLocaleLowerCase().includes(tittel) == false) {
+            skjulteElm.push(link)
         }
 
-    })
-   function lagreElm(){
-    
+
+    }
+
+})
+
+function lagreElm() {
+
     skjulteElm.forEach(element => {
-        localStorage.setItem(element,element)
+        localStorage.setItem(element, element)
     });
-   }
+}
