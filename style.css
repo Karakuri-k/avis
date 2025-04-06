@@ -211,8 +211,7 @@ nav i {
 }
 
 main.hovedside {
-    min-width: 300;
-    max-width: 960px;
+    width: 960px;
     background-color: var(--lightMode);
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -612,6 +611,7 @@ section.gruppa {
 
 @media (width <=1000px) {
     main.hovedside {
+        width: 95%;
         grid-template-rows: repeat(8, 56vw);
     }
 
@@ -623,6 +623,9 @@ section.gruppa {
         gap: 1rem;
     }
 
+    .artikkel {
+        padding: 2vw;
+    }
     .artikkel h2 {
         font-size: 3.2vw;
     }
