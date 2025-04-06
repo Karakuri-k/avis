@@ -161,8 +161,9 @@ settings.addEventListener("click", function() {
             const element = sakene[i];
             const link = sakeneLink[i]
             if (tittel== ""){
-                console.log(ingenting)
+                continue
                 //askil. dette funker ikke. ingenting er faktisk ingenting for pcen. stakkars pc^- hilsen bendik
+                //nå er det fikset - hilsen askil
             }
             else if(element.toLocaleLowerCase().includes(tittel)){
                 let sokemotorSak = document.createElement("a")
