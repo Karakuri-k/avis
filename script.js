@@ -8,7 +8,11 @@ let sakene = [
     "Kineserne tetter luken i KI kappløpet med hjelp fra DeepSeek AI.",
     "Her ligger «internett»",
     "Nordmann klager inn OpenAI: ChatGPT påsto han hadde drept sine egne barn",
-    "Personvern fiasko - eller rett og slett en dum feil?"
+    "Personvern fiasko - eller rett og slett en dum feil?",
+    'Forfattere protesterer mot Meta: "Vi må si ifra"',
+    "Facebook stopper målrettede annonser mot britisk kvinne etter rettslig kamp"
+
+
 ]
 
 
