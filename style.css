@@ -54,13 +54,18 @@ body {
     font-size: 16px;
     height: 100vh;
     background-color: var(--lightMode);
+    width: 100vw;
 }
 body.hovedside {
     background: url("bilder/backgroundImgLight.svg") no-repeat fixed center;
+    background-size: 100vw;
+    background-color: var(--lightMode);
 
 }
 body.hovedside.darkMode {
     background: url("bilder/backgroundImgDark.svg") no-repeat fixed center;
+    background-size: 100vw;
+    background-color: var(--darkMode);
 }
 body.darkMode {
     background-color: var(--darkMode);
@@ -165,7 +170,7 @@ nav button {
 main.hovedside {
     min-width: 300;
     max-width: 960px;
-    background-color: red;
+    background-color: var(--lightMode);
     display: grid;
     grid-template-columns: repeat(6,minmax(0,1fr));
     grid-template-rows: repeat(9, 350px);
@@ -173,6 +178,9 @@ main.hovedside {
     justify-content: center;
     margin: auto;
     margin-top: 100vh;
+}
+.darkMode main.hovedside {
+    background-color: var(--darkMode);
 }
 main.hovedside > div {
     background-color: green;
@@ -481,4 +489,12 @@ section.gruppa {
     text-decoration: underline;
     text-decoration-line: black;
     text-decoration-color: var(--darkAccent);
+}
+@media (width <= 1000px) {
+    main.hovedside {
+        grid-template-rows: repeat(9, 56vw);
+    }
+    .disappear {
+        display: none;
+    }
 }

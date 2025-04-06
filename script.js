@@ -10,13 +10,7 @@ let sakene=[
     "Nordmann klager inn OpenAI: ChatGPT påsto han hadde drept sine egne barn",
     "Personvern fiasko - eller rett og slett en dum feil?"   
 ]
-let sakeneLink=[
-    "23andme.html",
-    "deepseekai.html",
-    "fiberdør.html",
-    "gptMord.html",
-    "placeholder.html"
-]
+
 
 let sakeneLink=[
     "23andme",
@@ -32,7 +26,7 @@ let skjulteElm = []
 
 if(window.location.href.includes("sok")==false){
     console.log("du er ikke i sok.html")
-    localStorage.clear()
+
 } else{console.log("du er i sok")
     sakeneLink.forEach(element =>{
         
