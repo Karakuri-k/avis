@@ -8,11 +8,9 @@ let sakene=[
     "Kineserne tetter luken i KI kappløpet med hjelp fra DeepSeek AI.",
     "Her ligger «internett»",
     "Nordmann klager inn OpenAI: ChatGPT påsto han hadde drept sine egne barn",
-    "Personvern fiasko - eller rett og slett en dum feil?",
-    "Forfattere protesterer mot Meta: 'Vi må si ifra'",
-    "Facebook stopper målrettede annonser mot britisk kvinne etter rettslig kamp"
-
+    "Personvern fiasko - eller rett og slett en dum feil?"   
 ]
+
 
 let sakeneLink=[
     "23andme",
@@ -28,7 +26,7 @@ let skjulteElm = []
 
 if(window.location.href.includes("sok")==false){
     console.log("du er ikke i sok.html")
-    localStorage.clear()
+
 } else{console.log("du er i sok")
     sakeneLink.forEach(element =>{
         
@@ -60,81 +58,29 @@ const articles = document.querySelectorAll(".article")
 const footer = document.querySelector("footer")
 
 let light = true
-
-onload = darkModeLightMode() 
-
 function darkModeLightMode() {
-    if (light == true) {
-        document.body.style.backgroundColor = "var(--darkMode)"
-        navBar.style.backgroundColor = "var(--darkAccent)"
-        settingsWindow.style.backgroundColor = "var(--darkAccent)"
-        p.style.color = "var(--darkModeText)"
-        navOptions.forEach((navOption) => {
-            navOption.style.color = "var(--teal)"
-        });
-        dropdownElm.style.backgroundColor = "var(--darkAccent)"
-        dropdownLinks.forEach((dropdownLink) => {
-            dropdownLink.style.color = "var(--darkModeText)"
-            dropdownLink.onmouseenter = function(){
-                console.log("mouse enter")
-                dropdownLink.color = "var(--teal)"
-            };
-        });
-        articles.forEach((article) => {
-            article.style.backgroundColor = "var(--darkAccent)"
-            article.style.color = "var(--darkModeText)"
-        });
-        footer.style.color = "var(--darkModeText)"
+    if (light) {
+        document.querySelector("body").classList.add("darkMode")
         document.querySelector(".logo").src = "bilder/logoDarkMode.svg"
-        document.querySelector("body.hovedside").style.background = 'url("bilder/backgroundImgDark.svg") no-repeat fixed center'
         light = false
         localStorage.setItem("light", false)
     } else {
-        document.body.style.backgroundColor = "var(--lightMode)"
-        navBar.style.backgroundColor = "var(--lightAccent)"
-        settingsWindow.style.backgroundColor = "var(--lightAccent)"
-        p.style.color = "var(--lightModeText)"
-        navOptions.forEach((navOption) => {
-            navOption.style.color = "var(--purple)"
-        });
-        dropdownElm.style.backgroundColor = "var(--lightAccent)"
-        dropdownLinks.forEach((dropdownLink) => {
-            dropdownLink.style.color = "var(--lightModeText)"
-            dropdownLink.onmouseenter = function(){
-                console.log("mouse enter")
-                dropdownLink.color = "var(--purple)"
-            };
-        });
-        articles.forEach((article) => {
-            article.style.backgroundColor = "white"
-            article.style.color = "var(--lightModeText)"
-        });
-        footer.style.color = "var(--lightModeText)"
+        document.querySelector("body").classList.remove("darkMode")
         document.querySelector(".logo").src = "bilder/logoLightMode.svg"
-        document.querySelector("body.hovedside").style.background = 'url("bilder/backgroundImgLight.svg") no-repeat fixed center'
         light = true
         localStorage.setItem("light", true)
     }
 }
-darkModeKnapp.addEventListener("click", darkModeLightMode())
+window.onload = function() {
+    if (localStorage.getItem("light") === "false") {
+        light = true 
+        darkModeLightMode()
+    } 
+}
+darkModeKnapp.addEventListener("click", darkModeLightMode)
 
 //ok, vi prøver classes i stedet
-dropdownLinks.forEach(dropdownLink => dropdownLink.addEventListener("mouseenter", function() {
-    console.log("mouse enter");
-    if (light) {
-        dropdownLink.style.color = "var(--purple)";
-    } else {
-        dropdownLink.style.color = "var(--teal)";
-    }
-}));
-dropdownLinks.forEach(dropdownLink => dropdownLink.addEventListener("mouseleave", function() {
-    console.log("mouse enter");
-    if (light) {
-        dropdownLink.style.color = "var(--lightmodeText";
-    } else {
-        dropdownLink.style.color = "var(--darkModeText)";
-    }
-}));    
+   
 
 
 const settings = document.querySelector(".settings")
@@ -161,8 +107,8 @@ settings.addEventListener("click", function() {
         for (let i = 0; i < sakene.length; i++) {
             const element = sakene[i];
             const link = sakeneLink[i]
-            if (tittel== ""){
-                continue
+            if (tittel == "") {
+                console.log("No input provided");
                 //askil. dette funker ikke. ingenting er faktisk ingenting for pcen. stakkars pc^- hilsen bendik
                 //nå er det fikset - hilsen askil
             }

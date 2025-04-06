@@ -27,7 +27,16 @@ ul {
     padding: 0;
     font-weight: normal;
 }
+p, i{
+    color: var(--lightModeText)'';
+}
+.darkMode p, .darkMode i {
+    color: var(--darkModeText);
+}
 
+.darkMode nav>a, .darkMode button {
+    color: var(--teal);
+}
 ol,
 ul {
     list-style: none;
@@ -45,13 +54,23 @@ body {
     font-size: 16px;
     height: 100vh;
     background-color: var(--lightMode);
+    width: 100vw;
 }
 body.hovedside {
-    background-color: var(--darkMode);
     background: url("bilder/backgroundImgLight.svg") no-repeat fixed center;
+    background-size: 100vw;
+    background-color: var(--lightMode);
 
 }
-
+body.hovedside.darkMode {
+    background: url("bilder/backgroundImgDark.svg") no-repeat fixed center;
+    background-size: 100vw;
+    background-color: var(--darkMode);
+}
+body.darkMode {
+    background-color: var(--darkMode);
+    color: var(--darkModeText);
+}
 /*css minimal reset ^*/
 :root {
     --purple: rgb(235, 161, 241);
@@ -83,6 +102,9 @@ nav {
     height: 74px;
     background-color: var(--lightAccent);
 }
+.darkMode nav {
+    background-color: var(--darkAccent);
+}
 
 nav>a,
 nav button {
@@ -108,7 +130,9 @@ nav button {
     right: -300px;
     top: 74px;
 }
-
+.darkMode .settingsWindow {
+    background-color: var(--darkAccent);
+}
 .dropdown-content {
     display: none;
     flex-direction: column;
@@ -120,11 +144,21 @@ nav button {
     left: 0px;
     top: 74px;
 }
-
+.darkMode .dropdown-content {
+    background-color: var(--darkAccent);
+}
 .dropdown-content a {
     color: var(--lightModeText);
 }
-
+.darkMode .dropdown-content a {
+    color: var(--darkModeText);
+}
+.dropdown-content a:hover {
+    color: var(--purple);
+}
+.darkMode .dropdown-content a:hover {
+    color: var(--teal);
+}
 .darkmodeContainer,
 .dropdown-content a {
     margin: 1.25rem;
@@ -136,7 +170,7 @@ nav button {
 main.hovedside {
     min-width: 300;
     max-width: 960px;
-    background-color: red;
+    background-color: var(--lightMode);
     display: grid;
     grid-template-columns: repeat(6,minmax(0,1fr));
     grid-template-rows: repeat(9, 350px);
@@ -144,6 +178,9 @@ main.hovedside {
     justify-content: center;
     margin: auto;
     margin-top: 100vh;
+}
+.darkMode main.hovedside {
+    background-color: var(--darkMode);
 }
 main.hovedside > div {
     background-color: green;
@@ -186,7 +223,14 @@ main.hovedside > div {
 }
 
 /* Artikler*/
-
+.article {
+    background-color: white;
+    color: var(--lightModeText);
+}
+.darkMode .article {
+    background-color: var(--darkAccent);
+    color: var(--darkModeText);
+}
 main.article {
     display: flex;
     flex-direction: column;
@@ -235,7 +279,11 @@ footer {
     margin: 38px;
     text-align: center;
     text-decoration: none;
-    color: black
+    color: var(--lightModeText);
+}
+.darkMode footer {
+    background-color: var(--darkAccent);
+    color: var(--darkModeText);
 }
 footer.hovedside {
     height: 800px;
@@ -442,4 +490,12 @@ section.gruppa {
     text-decoration: underline;
     text-decoration-line: black;
     text-decoration-color: var(--darkAccent);
+}
+@media (width <= 1000px) {
+    main.hovedside {
+        grid-template-rows: repeat(9, 56vw);
+    }
+    .disappear {
+        display: none;
+    }
 }
