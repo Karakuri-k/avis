@@ -158,9 +158,11 @@ main.hovedside > div {
     display: flex;
     flex-direction: column;
     width: 20%;
+    min-width: 20%;
  font-family: inherit;
 }
 .sokDropdown{
+    min-width: inherit;
     position: absolute;
     top: 74px;
     display: flex;

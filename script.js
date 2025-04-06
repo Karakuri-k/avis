@@ -139,7 +139,7 @@ settings.addEventListener("click", function() {
                 let sokemotorSak = document.createElement("a")
                 sokDropdown.appendChild(sokemotorSak)
                 sokemotorSak.innerHTML= element
-                sokemotorSak.href = "artikler/"+link
+                sokemotorSak.href = "../artikler/"+link
             }
            
         

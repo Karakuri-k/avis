@@ -11,18 +11,28 @@
 
 <body>
     <nav>
-        <a href="../index.html">
-            <img class="logo" src="../bilder/logoLightMode.svg" alt="">
-        </a>
-        <a href="../nyheter.html">News</a>
         <div class="dropdown">
-            <button class="dropbtn" onclick="klikk()">Dropdown
-                <i class="fa fa-caret-down"></i>
+            <button class="dropbtn" onclick="klikk()">
+                <i class="fa-solid fa-bars"></i>
             </button>
-            <div class="dropdown-content">
-                <a href="../om-oss.html">Om oss</a>
-                <a href="../spill.html">Spill</a>
-                <a href="#">Link 3</a>
+        </div>
+        <a href="index.html">
+            <img class="logo" src="bilder/logoLightMode.svg" alt="">
+        </a>
+        <a href="nyheter.html">News</a>
+        <a href="sport.html">Sports</a>
+        <div  id="sokeElementer">
+            <input type="text" id="sokeMotor">
+
+        
+        <div class="sokDropdown"></div> 
+       </div>
+        <div class="settings">
+            <button id="settingsBtn">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+        </div>
+    
     </nav>
     <div class="dropdown-content">
         <a href="om-oss.html">About us</a>
