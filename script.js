@@ -60,7 +60,7 @@ let light = true
 function darkModeLightMode() {
     if (light) {
         document.querySelector("body").classList.add("darkMode")
-        document.querySelector(".logo").src = "bilder/logoDarkMode.svg"
+        document.querySelector(".logo").src = "./bilder/logoDarkMode.svg"
         darkModeTekst.innerHTML = "Light Mode"
         darkModeIcon.classList.remove("fa-moon")
         darkModeIcon.classList.add("fa-sun")
@@ -68,7 +68,7 @@ function darkModeLightMode() {
         localStorage.setItem("light", false)
     } else {
         document.querySelector("body").classList.remove("darkMode")
-        document.querySelector(".logo").src = "bilder/logoLightMode.svg"
+        document.querySelector(".logo").src = "./bilder/logoLightMode.svg"
         darkModeTekst.innerHTML = "Dark Mode"
         darkModeIcon.classList.remove("fa-sun")
         darkModeIcon.classList.add("fa-moon")
