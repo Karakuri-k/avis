@@ -436,7 +436,10 @@ aside a:hover {
     padding: 1rem;
     font-weight: 900;
 }
-
+.darkMode .artikkel {
+    background-color: var(--darkAccent);
+    color: var(--darkModeText);
+}
 .artikkel>img {
     width: 100%;
     height: 250px;
@@ -458,11 +461,6 @@ aside a:hover {
 
 }
 
-.artikkel>h3 {
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: center;
-}
 
 .En {
     grid-row: 1/3;
