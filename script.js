@@ -39,7 +39,6 @@ const footer = document.querySelector("footer")
 let light = true
 
 darkModeKnapp.addEventListener("click", function() {
-    console.log("trykket")
     if (light) {
         document.body.style.backgroundColor = "var(--darkMode)"
         navBar.style.backgroundColor = "var(--darkAccent)"
@@ -91,7 +90,7 @@ darkModeKnapp.addEventListener("click", function() {
         light = true
     }
 })
-//jeg vet forresten at jeg kan bruke classes til darkmode og lightmode, men det her var litt mer gøy å finne ut av. og ville vise at jeg visste  man kan gjøre det på denne måten også
+//ok, vi prøver classes i stedet
 dropdownLinks.forEach(dropdownLink => dropdownLink.addEventListener("mouseenter", function() {
     console.log("mouse enter");
     if (light) {
@@ -134,6 +133,7 @@ settings.addEventListener("click", function() {
             const link = sakeneLink[i]
             if (tittel== ""){
                 console.log(ingenting)
+                //askil. dette funker ikke. ingenting er faktisk ingenting for pcen. stakkars pc^- hilsen bendik
             }
             else if(element.toLocaleLowerCase().includes(tittel)){
                 let sokemotorSak = document.createElement("a")
