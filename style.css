@@ -62,21 +62,21 @@ body {
     /* Vår navbar har position fixed. Da må vi ha litt 
        margin på toppen for å ikke bli liggende "bak" den */
     margin-top: 74px;
-    height: 100vh;
+
     background-color: var(--lightMode);
-    width: 100vw;
+    width: 100%;
 }
 
 body.hovedside {
     background: url("bilder/backgroundImgLight.svg") no-repeat fixed center;
-    background-size: 100vw;
+    background-size: 100%;
     background-color: var(--lightMode);
 
 }
 
 body.hovedside.darkMode {
     background: url("bilder/backgroundImgDark.svg") no-repeat fixed center;
-    background-size: 100vw;
+    background-size: 100%;
     background-color: var(--darkMode);
 }
 
@@ -163,6 +163,7 @@ nav i {
     position: fixed;
     right: -300px;
     top: 74px;
+    transition: all 0.5s ease-in-out;
 }
 
 .darkMode .settingsWindow {
@@ -170,15 +171,16 @@ nav i {
 }
 
 .dropdown-content {
-    display: none;
+    display: flex;
     flex-direction: column;
     height: 100vh;
     background-color: var(--lightAccent);
     width: 300px;
     z-index: 1000;
     position: fixed;
-    left: 0px;
+    left: -300px;
     top: 74px;
+    transition: all 0.5s ease-in-out;
 }
 
 .darkMode .dropdown-content {

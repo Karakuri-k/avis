@@ -41,10 +41,12 @@ if (window.location.href.includes("sok") == false) {
 
 console.log(localStorage)
 function klikk() {
-    if (dropdownElm.style.display == "flex") {
-        dropdownElm.style.display = "none"
+    if (dropdownElm.style.left == "0px") {
+        console.log("style left 0")
+        dropdownElm.style.left = "-300px"
     } else {
-        dropdownElm.style.display = "flex"
+        console.log("style left -300")
+        dropdownElm.style.left = "0"
     }
 }
 
