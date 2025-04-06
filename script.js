@@ -33,6 +33,7 @@ if(window.location.href.includes("sok")==false){
         if(localStorage.getItem(element)){
             let hidden = document.getElementById(element)
             hidden.style.display="none"
+            localStorage.removeItem(element)
         }
     })
 }
