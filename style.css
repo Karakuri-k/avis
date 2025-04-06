@@ -134,14 +134,15 @@ nav button {
     user-select: none;
 }
 main.hovedside {
-    height: fit-content;
-    width: 100%;
+    min-width: 300;
+    max-width: 960px;
     background-color: red;
     display: grid;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-rows: repeat(5, 350px);
-    gap: 2rem;
+    grid-template-columns: repeat(6,minmax(0,1fr));
+    grid-template-rows: repeat(9, 350px);
+    gap: 1rem;
     justify-content: center;
+    margin: auto;
     margin-top: 100vh;
 }
 main.hovedside > div {
@@ -322,13 +323,40 @@ aside a:hover {
 
 .artikkelEn {
     grid-row: 1/3;
-    grid-column: 1/3;
+    grid-column: 1/7;
+}
+.artikkelTo {
+    grid-row: 3/4;
+    grid-column: 1/4;
+}
+.artikkelTre {
+    grid-row: 3/4;
+    grid-column: 4/7;
+}
+.artikkelFire {
+    grid-row: 4/6;
+    grid-column: 1/7;
+}
+.artikkelFem {
+    grid-row: 6/7;
+    grid-column: 1/4;
+}
+.artikkelSeks {
+    grid-row: 6/7;
+    grid-column: 4/7;
 }
 .artikkelSju {
-    grid-row: 4/6;
-    grid-column: 1/3;
+    grid-row: 7/9;
+    grid-column: 1/7;
 }
-
+.artikkelAatte {
+    grid-row: 9/10;
+    grid-column: 1/4;
+}
+.artikkelNi {
+    grid-row: 9/10;
+    grid-column: 4/7;
+}
 .aboutus {
     width: 80%;
     margin: auto;
