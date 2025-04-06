@@ -27,16 +27,27 @@ ul {
     padding: 0;
     font-weight: normal;
 }
-p, i, h3, a {
+
+p,
+i,
+h3,
+a {
     color: var(--lightModeText);
 }
-.darkMode p, .darkMode i, .darkMode h3, .darkMode a {
+
+.darkMode p,
+.darkMode i,
+.darkMode h3,
+.darkMode a {
     color: var(--darkModeText);
 }
 
-.darkMode nav>a, .darkMode button {
+.darkMode nav a,
+.darkMode button,
+.darkMode nav i {
     color: var(--teal);
 }
+
 ol,
 ul {
     list-style: none;
@@ -51,26 +62,29 @@ body {
     /* Vår navbar har position fixed. Da må vi ha litt 
        margin på toppen for å ikke bli liggende "bak" den */
     margin-top: 74px;
-    font-size: 16px;
     height: 100vh;
     background-color: var(--lightMode);
     width: 100vw;
 }
+
 body.hovedside {
     background: url("bilder/backgroundImgLight.svg") no-repeat fixed center;
     background-size: 100vw;
     background-color: var(--lightMode);
 
 }
+
 body.hovedside.darkMode {
     background: url("bilder/backgroundImgDark.svg") no-repeat fixed center;
     background-size: 100vw;
     background-color: var(--darkMode);
 }
+
 body.darkMode {
     background-color: var(--darkMode);
     color: var(--darkModeText);
 }
+
 /*css minimal reset ^*/
 :root {
     --purple: rgb(235, 161, 241);
@@ -93,21 +107,41 @@ a {
 /* Til Navbar */
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1;
     height: 74px;
+    padding: 0 20px;
     background-color: var(--lightAccent);
 }
+
 .darkMode nav {
     background-color: var(--darkAccent);
 }
 
-nav>a,
-nav button {
+.navLeft,
+.navRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+}
+
+.navLeft {
+    justify-content: flex-start;
+    gap: 3rem;
+}
+
+.navRight {
+    justify-content: flex-end;
+}
+
+nav a,
+nav button,
+nav i {
     background-color: inherit;
     color: var(--purple);
     font-size: 30px;
@@ -133,6 +167,7 @@ nav button {
 .darkMode .settingsWindow {
     background-color: var(--darkAccent);
 }
+
 .dropdown-content {
     display: none;
     flex-direction: column;
@@ -144,21 +179,27 @@ nav button {
     left: 0px;
     top: 74px;
 }
+
 .darkMode .dropdown-content {
     background-color: var(--darkAccent);
 }
+
 .dropdown-content a {
     color: var(--lightModeText);
 }
+
 .darkMode .dropdown-content a {
     color: var(--darkModeText);
 }
+
 .dropdown-content a:hover {
     color: var(--purple);
 }
+
 .darkMode .dropdown-content a:hover {
     color: var(--teal);
 }
+
 .darkmodeContainer,
 .dropdown-content a {
     margin: 1.25rem;
@@ -167,40 +208,46 @@ nav button {
     font-size: 1.25rem;
     user-select: none;
 }
+
 main.hovedside {
     min-width: 300;
     max-width: 960px;
     background-color: var(--lightMode);
     display: grid;
-    grid-template-columns: repeat(6,minmax(0,1fr));
-    grid-template-rows: repeat(9, 350px);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-rows: repeat(9, 400px);
     gap: 1rem;
     justify-content: center;
     margin: auto;
     margin-top: 100vh;
 }
+
 .darkMode main.hovedside {
     background-color: var(--darkMode);
 }
-main.hovedside > div {
+
+main.hovedside>div {
     background-color: green;
 }
+
 /* søkemotoren */
-#sokeMotor{
+#sokeMotor {
     height: 34px;
-    min-width: fit-content;
+    min-width: 100%;
     border-radius: 10px;
     border: none;
-    
 }
-#sokeElementer{
+
+#sokeElementer {
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 100%;
     min-width: 20%;
- font-family: inherit;
+    font-family: inherit;
+    flex: 1 0 auto;
 }
-.sokDropdown{
+
+.sokDropdown {
     min-width: inherit;
     position: absolute;
     top: 74px;
@@ -210,14 +257,16 @@ main.hovedside > div {
     background-color: white;
     max-width: 600px;
 }
-.sokDropdown>*{
+
+.sokDropdown>* {
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: var(--lightModeText);
     font-size: 1.25rem;
 }
-.sokDropdown>*:hover{
+
+.sokDropdown>*:hover {
     text-decoration: underline;
 
 }
@@ -227,10 +276,12 @@ main.hovedside > div {
     background-color: white;
     color: var(--lightModeText);
 }
+
 .darkMode .article {
     background-color: var(--darkAccent);
     color: var(--darkModeText);
 }
+
 main.article {
     display: flex;
     flex-direction: column;
@@ -281,10 +332,12 @@ footer {
     text-decoration: none;
     color: var(--lightModeText);
 }
+
 .darkMode footer {
     background-color: var(--darkAccent);
     color: var(--darkModeText);
 }
+
 footer.hovedside {
     height: 800px;
     background-color: #191832;
@@ -292,7 +345,8 @@ footer.hovedside {
     padding: 0;
     width: 100%;
 }
-.bildetekst{
+
+.bildetekst {
     font-size: 0.875rem;
 
 }
@@ -311,13 +365,16 @@ footer.hovedside {
     font-size: 1.25rem;
 
 }
-section li{
+
+section li {
     font-size: 1.25rem;
 }
-b{
+
+b {
     font-size: 1.25rem;
 }
-section h3{
+
+section h3 {
     font-size: 1.40rem;
     font-weight: bold;
 }
@@ -374,38 +431,47 @@ aside a:hover {
     grid-row: 1/3;
     grid-column: 1/7;
 }
+
 .artikkelTo {
     grid-row: 3/4;
     grid-column: 1/4;
 }
+
 .artikkelTre {
     grid-row: 3/4;
     grid-column: 4/7;
 }
+
 .artikkelFire {
     grid-row: 4/6;
     grid-column: 1/7;
 }
+
 .artikkelFem {
     grid-row: 6/7;
     grid-column: 1/4;
 }
+
 .artikkelSeks {
     grid-row: 6/7;
     grid-column: 4/7;
 }
+
 .artikkelSju {
     grid-row: 7/9;
     grid-column: 1/7;
 }
+
 .artikkelAatte {
     grid-row: 9/10;
     grid-column: 1/4;
 }
+
 .artikkelNi {
     grid-row: 9/10;
     grid-column: 4/7;
 }
+
 .aboutus {
     width: 80%;
     margin: auto;
@@ -452,16 +518,17 @@ section.gruppa {
     justify-content: center;
 }
 
-.aboutus .visible{
+.aboutus .visible {
     color: white;
     z-index: 1000;
 }
 
 /* til sok.html */
-#sokContainer{
-    padding:30px 0;
+#sokContainer {
+    padding: 30px 0;
 }
-#sokContainer>a{
+
+#sokContainer>a {
     display: flex;
     height: 150px;
     text-decoration: none;
@@ -472,36 +539,64 @@ section.gruppa {
     overflow: hidden;
 
 }
-#sokContainer h3{
+
+#sokContainer h3 {
     font-size: 2rem;
     text-decoration: none;
     font-weight: 400;
     text-align: center;
     height: 100%;
     padding: 10px;
-   
+
 }
-#sokContainer img{
+
+#sokContainer img {
     width: 260px;
 }
 
-#sokContainer a:hover h3 , .sokDropdown>*:hover{
+#sokContainer a:hover h3,
+.sokDropdown>*:hover {
     color: var(--purple);
 }
-#sokContainer a:hover, .sokDropdown>*:hover{
+
+#sokContainer a:hover,
+.sokDropdown>*:hover {
     text-decoration: underline var(--purple);
 }
-.darkMode #sokContainer a:hover h3 , .darkMode .sokDropdown>*:hover{
+
+.darkMode #sokContainer a:hover h3,
+.darkMode .sokDropdown>*:hover {
     color: var(--teal);
 }
-.darkMode #sokContainer a:hover , .darkMode .sokDropdown>*:hover{
+
+.darkMode #sokContainer a:hover,
+.darkMode .sokDropdown>*:hover {
     text-decoration: underline var(--teal);
 }
-@media (width <= 1000px) {
+
+@media (width <=1000px) {
     main.hovedside {
         grid-template-rows: repeat(9, 56vw);
     }
+
     .disappear {
         display: none;
+    }
+    .navLeft {
+        gap: 1rem;
+    }
+}
+@media (width <=500px) {
+    .navLeft > a {
+        display: none;
+    }
+  
+    .navLeft, .navRight{
+        gap: 0.5rem;
+    }
+}
+@media (width <=350px) {
+    #sokeElementer {
+        width: 55vw;
     }
 }

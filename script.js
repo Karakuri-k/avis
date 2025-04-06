@@ -48,25 +48,27 @@ function klikk() {
 }
 
 const darkModeKnapp = document.querySelector(".darkmodeContainer > i")
-const navBar = document.querySelector("nav")
 const settingsWindow = document.querySelector(".settingsWindow")
-const p = document.querySelector(".darkmodeContainer")
-const navOptions = document.querySelectorAll("nav a, nav button ")
-const dropdownLinks = document.querySelectorAll(".dropdown-content a")
-const dropdownLinkHovers = document.querySelectorAll(".dropdown-content a:hover")
-const articles = document.querySelectorAll(".article") 
-const footer = document.querySelector("footer")
+const darkModeTekst = document.querySelector(".darkmodeContainer > p")
+const darkModeIcon = document.querySelector(".darkmodeContainer > i")
+
 
 let light = true
 function darkModeLightMode() {
     if (light) {
         document.querySelector("body").classList.add("darkMode")
         document.querySelector(".logo").src = "bilder/logoDarkMode.svg"
+        darkModeTekst.innerHTML = "Light Mode"
+        darkModeIcon.classList.remove("fa-moon")
+        darkModeIcon.classList.add("fa-sun")
         light = false
         localStorage.setItem("light", false)
     } else {
         document.querySelector("body").classList.remove("darkMode")
         document.querySelector(".logo").src = "bilder/logoLightMode.svg"
+        darkModeTekst.innerHTML = "Dark Mode"
+        darkModeIcon.classList.remove("fa-sun")
+        darkModeIcon.classList.add("fa-moon")
         light = true
         localStorage.setItem("light", true)
     }
@@ -74,8 +76,15 @@ function darkModeLightMode() {
 window.onload = function() {
     if (localStorage.getItem("light") === "false") {
         light = true 
+        darkModeTekst.innerHTML = "Light Mode"
+        darkModeIcon.classList.remove("fa-moon")
+        darkModeIcon.classList.add("fa-sun")
         darkModeLightMode()
-    } 
+    } else {
+        darkModeTekst.innerHTML = "Dark Mode"
+        darkModeIcon.classList.remove("fa-sun")
+        darkModeIcon.classList.add("fa-moon")
+    }
 }
 darkModeKnapp.addEventListener("click", darkModeLightMode)
 
@@ -111,6 +120,7 @@ settings.addEventListener("click", function() {
                 console.log("No input provided");
                 //askil. dette funker ikke. ingenting er faktisk ingenting for pcen. stakkars pc^- hilsen bendik
                 //nå er det fikset - hilsen askil
+                //tusen takk - hilsen karen
             }
             else if(element.toLocaleLowerCase().includes(tittel)){
                 let sokemotorSak = document.createElement("a")

@@ -12,27 +12,31 @@
 </head>
 <body>
     <nav>
-        <div class="dropdown">
-            <button class="dropbtn" onclick="klikk()">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+        <div class="navLeft">
+            <div class="dropdown">
+                <button class="dropbtn" onclick="klikk()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <a href="index.html">
+                <img class="logo" src="bilder/logoLightMode.svg" alt="">
+            </a>
+            <a class="disappear" href="nyheter.html">News</a>
+            <a class="disappear" href="sport.html">Sports</a>
         </div>
-        <a href="../index.html">
-            <img class="logo" src="../bilder/logoLightMode.svg" alt="">
-        </a>
-        <a href="../nyheter.html">News</a>
-        <a href="../sport.html">Sports</a>
-        <div  id="sokeElementer">
-            <form action="../sok.html" name="myform" onsubmit="lagreElm()">
-            <input type="text" id="sokeMotor" name="sokeMotor" placeholder="søk">
-        </form>
-        
-        <div class="sokDropdown"></div> 
-       </div>
-        <div class="settings">
-            <button id="settingsBtn">
-                <i class="fa-solid fa-gear"></i>
-            </button>
+
+        <div class="navRight">
+            <div  id="sokeElementer">
+                <form action="sok.html" name="myform" onsubmit="lagreElm()">
+                <input type="text" id="sokeMotor" name="sokeMotor" placeholder="søk">
+            </form>
+            <div class="sokDropdown"></div> 
+           </div>
+            <div class="settings">
+                <button id="settingsBtn">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+            </div>
         </div>
     
     </nav>
