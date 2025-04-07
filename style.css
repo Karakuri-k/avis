@@ -296,6 +296,8 @@ main.article {
 
 .article h1 {
     font-weight: 300;
+    font-size: 2rem;
+    font-family: 'Oxanium','sans-serif';
 }
 
 .article header {
@@ -390,11 +392,12 @@ ul {
 /* aside*/
 aside {
     position: absolute;
-    top: 30%;
+    top: 430px;
     left: 80%;
     min-height: fit-content;
     background-color: white;
     transform: translate(-50%, -50%);
+    font-family: 'Oxanium','sans-serif';
 }
 
 .aside {
@@ -413,9 +416,10 @@ aside {
 .aside h2 {
     font-size: 2rem;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     color: black;
     text-align: center;
+    font-family: 'Oxanium','sans-serif';
 }
 
 
@@ -614,6 +618,11 @@ section.gruppa {
 .darkMode .sokDropdown>*:hover {
     text-decoration: underline var(--teal);
 }
+@media (max-width:1200px){
+    aside{
+        display: none;
+    }
+}
 
 @media (max-width: 1000px) {
     main.hovedside {
@@ -634,6 +643,9 @@ section.gruppa {
     }
     .artikkel h2 {
         font-size: 3.2vw;
+    }
+    .article h1{
+        font-size: 5vw;
     }
 
     .En h2,
