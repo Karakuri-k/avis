@@ -71,7 +71,6 @@ body.hovedside {
     background: url("bilder/backgroundImgLight.svg") no-repeat fixed center;
     background-size: 100%;
     background-color: var(--lightMode);
-
 }
 
 body.hovedside.darkMode {
@@ -677,6 +676,22 @@ section.gruppa {
     .navRight {
         gap: 0.5rem;
     }
+    body.hovedside {
+        background: url("bilder/backgroundImgLight.svg") no-repeat;
+        background-size: 100%;
+        background-color: var(--lightMode);
+        background-position: top center;
+    }
+    body.hovedside.darkMode {
+        background: url("bilder/backgroundImgDark.svg") no-repeat;
+        background-size: 100%;
+        background-color: var(--darkMode);
+        background-position: center center;
+    }
+    main.hovedside {
+        margin-top: 30vh;
+    }
+
 }
 
 @media (max-width: 350px) {
