@@ -543,7 +543,7 @@ aside a:hover {
 }
 
 section.gruppa {
-
+    z-index: -1;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -556,7 +556,7 @@ section.gruppa {
     border-radius: 50%;
     height: 300px;
     object-fit: cover;
-    margin: 70px;
+    margin: 41px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -567,9 +567,12 @@ section.gruppa {
 
 }
 
+.aboutus header img{
+    width: 90%;
+}
+
 .aboutus .visible {
     color: white;
-    z-index: 1;
 }
 
 /* til sok.html */
@@ -586,7 +589,6 @@ section.gruppa {
     border: solid var(--lightModeText) 1px;
     border-radius: 10px;
     overflow: hidden;
-
 }
 
 #sokContainer h3 {
@@ -596,7 +598,6 @@ section.gruppa {
     text-align: center;
     height: 100%;
     padding: 10px;
-
 }
 
 #sokContainer img {
@@ -652,6 +653,10 @@ footer.hovedside a{
 }
 
 @media (max-width: 1000px) {
+    main.aboutus {
+        width: 95%;
+        padding: 2vw;
+    }
     main.hovedside {
         width: 95%;
         grid-template-rows: repeat(8, 56vw);
@@ -704,9 +709,17 @@ footer.hovedside a{
     #sokContainer img{
         display: none;
     }
+
+    .aboutus section p {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 500px) {
+    .aboutus .profil {
+        margin: 35px;
+    }
+
     .navLeft>a {
         display: none;
     }
@@ -730,7 +743,6 @@ footer.hovedside a{
     main.hovedside {
         margin-top: 30vh;
     }
-
 }
 
 @media (max-width: 350px) {
