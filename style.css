@@ -327,12 +327,12 @@ main.article {
 }
 
 footer {
-    background-color: none;
     width: 60%;
     margin: 38px;
     text-align: center;
     text-decoration: none;
     color: var(--lightModeText);
+    background-color: var(--lightAccent);
 }
 
 .darkMode footer {
@@ -342,7 +342,6 @@ footer {
 
 footer.hovedside {
     height: 800px;
-    background-color: #191832;
     margin: 0;
     padding: 0;
     width: 100%;
