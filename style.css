@@ -552,19 +552,24 @@ section.gruppa {
 .aboutus .profil {
     width: 300px;
     padding: 20px;
+    background-color: var(--purple);
     border-radius: 50%;
     height: 300px;
     object-fit: cover;
-    background-color: black;
     margin: 70px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.darkMode .aboutus .profil{
+    background-color: var(--teal);
+
 }
 
 .aboutus .visible {
     color: white;
-    z-index: 2;
+    z-index: 1;
 }
 
 /* til sok.html */
@@ -622,6 +627,28 @@ section.gruppa {
     aside{
         display: none;
     }
+}
+
+footer.hovedside{
+    display: flex;
+    justify-content: center;
+}
+footer.hovedside div{
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding: 50px;
+    line-height: 5;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: left;
+
+}
+
+footer.hovedside a{
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding: 50px;
+
 }
 
 @media (max-width: 1000px) {
@@ -698,7 +725,7 @@ section.gruppa {
         background: url("bilder/backgroundImgDark.svg") no-repeat;
         background-size: 100%;
         background-color: var(--darkMode);
-        background-position: center center;
+        background-position: top center;
     }
     main.hovedside {
         margin-top: 30vh;
