@@ -137,7 +137,7 @@ sokeMotor.addEventListener('input', function () {
             let sokemotorSak = document.createElement("a")
             sokDropdown.appendChild(sokemotorSak)
             sokemotorSak.innerHTML = element
-            sokemotorSak.href = "../artikler/" + link + ".html"
+            sokemotorSak.href = "avis/artikler/" + link + ".html"
         } else if (element.toLocaleLowerCase().includes(tittel) == false) {
             skjulteElm.push(link)
         }
