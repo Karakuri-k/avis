@@ -633,6 +633,7 @@ section.gruppa {
 footer.hovedside{
     display: flex;
     justify-content: center;
+    height: 60vh;
 }
 footer.hovedside div{
     font-size: 1.25rem;
@@ -643,12 +644,14 @@ footer.hovedside div{
     width: 100%;
     text-align: left;
 
+
 }
 
 footer.hovedside a{
     font-size: 1.25rem;
     font-weight: 300;
     padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
@@ -705,7 +708,27 @@ footer.hovedside a{
         width: 90%;
     }
 }
+
+@media(max-width:700px){
+    footer.hovedside a{
+        font-size: 1rem;
+        padding: 0;
+    }
+    footer.hovedside div{
+        font-size: 1rem;
+        line-height: 3;
+        padding: 20px;
+    }
+    footer.hovedside {
+        display: flex;
+        justify-content: center;
+        height: 35vh;
+    }
+}
 @media (max-width:600px){
+    footer.hovedside div, a {
+        font-size: 0.7rem;
+    }
     #sokContainer img{
         display: none;
     }
