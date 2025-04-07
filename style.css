@@ -457,6 +457,10 @@ aside a:hover {
     font-size: 3rem;
 }
 
+.headerImg{
+    width: 90%;
+}
+
 .En>img,
 .Fire>img,
 .Sju>img {
