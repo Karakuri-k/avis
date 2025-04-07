@@ -698,7 +698,7 @@ section.gruppa {
         background: url("bilder/backgroundImgDark.svg") no-repeat;
         background-size: 100%;
         background-color: var(--darkMode);
-        background-position: center center;
+        background-position: top center;
     }
     main.hovedside {
         margin-top: 30vh;
