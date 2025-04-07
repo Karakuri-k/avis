@@ -571,7 +571,7 @@ section.gruppa {
 
 #sokContainer>a {
     display: flex;
-    max-height: 10wv;
+    max-height: 10vw;
     text-decoration: none;
     gap: 30px;
     margin: 30px;
