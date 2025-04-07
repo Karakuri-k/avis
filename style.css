@@ -654,6 +654,12 @@ section.gruppa {
     p {
         font-size: 4vw;
     }
+    aside{
+        display: none;
+    }
+    main.article{
+        width: 90%;
+    }
 }
 @media (max-width:600px){
     #sokContainer img{
