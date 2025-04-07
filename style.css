@@ -71,7 +71,6 @@ body.hovedside {
     background: url("bilder/backgroundImgLight.svg") no-repeat fixed center;
     background-size: 100%;
     background-color: var(--lightMode);
-
 }
 
 body.hovedside.darkMode {
@@ -297,6 +296,8 @@ main.article {
 
 .article h1 {
     font-weight: 300;
+    font-size: 2rem;
+    font-family: 'Oxanium','sans-serif';
 }
 
 .article header {
@@ -391,11 +392,12 @@ ul {
 /* aside*/
 aside {
     position: absolute;
-    top: 30%;
+    top: 430px;
     left: 80%;
     min-height: fit-content;
     background-color: white;
     transform: translate(-50%, -50%);
+    font-family: 'Oxanium','sans-serif';
 }
 
 .aside {
@@ -414,9 +416,10 @@ aside {
 .aside h2 {
     font-size: 2rem;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     color: black;
     text-align: center;
+    font-family: 'Oxanium','sans-serif';
 }
 
 
@@ -620,6 +623,11 @@ section.gruppa {
 .darkMode .sokDropdown>*:hover {
     text-decoration: underline var(--teal);
 }
+@media (max-width:1200px){
+    aside{
+        display: none;
+    }
+}
 
 footer.hovedside{
     display: flex;
@@ -663,6 +671,9 @@ footer.hovedside a{
     .artikkel h2 {
         font-size: 3.2vw;
     }
+    .article h1{
+        font-size: 5vw;
+    }
 
     .En h2,
     .Fire h2,
@@ -682,6 +693,12 @@ footer.hovedside a{
     p {
         font-size: 4vw;
     }
+    aside{
+        display: none;
+    }
+    main.article{
+        width: 90%;
+    }
 }
 @media (max-width:600px){
     #sokContainer img{
@@ -698,6 +715,22 @@ footer.hovedside a{
     .navRight {
         gap: 0.5rem;
     }
+    body.hovedside {
+        background: url("bilder/backgroundImgLight.svg") no-repeat;
+        background-size: 100%;
+        background-color: var(--lightMode);
+        background-position: top center;
+    }
+    body.hovedside.darkMode {
+        background: url("bilder/backgroundImgDark.svg") no-repeat;
+        background-size: 100%;
+        background-color: var(--darkMode);
+        background-position: top center;
+    }
+    main.hovedside {
+        margin-top: 30vh;
+    }
+
 }
 
 @media (max-width: 350px) {
