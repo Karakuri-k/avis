@@ -62,9 +62,13 @@ const darkModeIcon = document.querySelector(".darkmodeContainer > i")
 
 let light = true
 function darkModeLightMode() {
+    let bilderef = ".."
+    if (document.body.classList.contains("hovedside")) {
+        bilderef = "."
+    }
     if (light) {
         document.querySelector("body").classList.add("darkMode")
-        document.querySelector(".logo").src = "./bilder/logoDarkMode.svg"
+        document.querySelector(".logo").src = bilderef + "/bilder/logoDarkMode.svg"
         darkModeTekst.innerHTML = "Light Mode"
         darkModeIcon.classList.remove("fa-moon")
         darkModeIcon.classList.add("fa-sun")
@@ -72,7 +76,7 @@ function darkModeLightMode() {
         localStorage.setItem("light", false)
     } else {
         document.querySelector("body").classList.remove("darkMode")
-        document.querySelector(".logo").src = "./bilder/logoLightMode.svg"
+        document.querySelector(".logo").src = bilderef + "/bilder/logoLightMode.svg"
         darkModeTekst.innerHTML = "Dark Mode"
         darkModeIcon.classList.remove("fa-sun")
         darkModeIcon.classList.add("fa-moon")
@@ -133,7 +137,7 @@ sokeMotor.addEventListener('input', function () {
             let sokemotorSak = document.createElement("a")
             sokDropdown.appendChild(sokemotorSak)
             sokemotorSak.innerHTML = element
-            sokemotorSak.href = "../artikler/" + link + ".html"
+            sokemotorSak.href = "avis/artikler/" + link + ".html"
         } else if (element.toLocaleLowerCase().includes(tittel) == false) {
             skjulteElm.push(link)
         }

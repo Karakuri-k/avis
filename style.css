@@ -4,8 +4,6 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
-    -webkit-text-size-adjust: 100%;
-
 }
 
 *,
@@ -161,7 +159,7 @@ nav i {
     height: 100vh;
     background-color: var(--lightAccent);
     width: 300px;
-    z-index: 1000;
+    z-index: 2;
     position: fixed;
     right: -300px;
     top: 74px;
@@ -178,7 +176,7 @@ nav i {
     height: 100vh;
     background-color: var(--lightAccent);
     width: 300px;
-    z-index: 1000;
+    z-index: 2;
     position: fixed;
     left: -300px;
     top: 74px;
@@ -329,12 +327,12 @@ main.article {
 }
 
 footer {
-    background-color: none;
     width: 60%;
     margin: 38px;
     text-align: center;
     text-decoration: none;
     color: var(--lightModeText);
+    background-color: var(--lightAccent);
 }
 
 .darkMode footer {
@@ -344,7 +342,6 @@ footer {
 
 footer.hovedside {
     height: 800px;
-    background-color: #191832;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -563,7 +560,7 @@ section.gruppa {
 
 .aboutus .visible {
     color: white;
-    z-index: 1000;
+    z-index: 2;
 }
 
 /* til sok.html */
@@ -573,7 +570,7 @@ section.gruppa {
 
 #sokContainer>a {
     display: flex;
-    height: 150px;
+    max-height: 10wv;
     text-decoration: none;
     gap: 30px;
     margin: 30px;
@@ -584,7 +581,7 @@ section.gruppa {
 }
 
 #sokContainer h3 {
-    font-size: 2rem;
+    font-size: 3vw;
     text-decoration: none;
     font-weight: 400;
     text-align: center;
@@ -594,7 +591,8 @@ section.gruppa {
 }
 
 #sokContainer img {
-    width: 260px;
+    max-width: 20%;
+    max-height: fit-content;
 }
 
 #sokContainer a:hover h3,
@@ -655,6 +653,11 @@ section.gruppa {
 
     p {
         font-size: 4vw;
+    }
+}
+@media (max-width:600px){
+    #sokContainer img{
+        display: none;
     }
 }
 
