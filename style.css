@@ -393,7 +393,7 @@ ul {
 /* aside*/
 aside {
     position: absolute;
-    top: 30%;
+    top: 430px;
     left: 80%;
     min-height: fit-content;
     background-color: white;
